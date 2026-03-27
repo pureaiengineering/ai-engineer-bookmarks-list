@@ -7,6 +7,7 @@
 - [APIs & SDKs](#apis--sdks)
 - [MCP (Model Context Protocol)](#mcp-model-context-protocol)
 - [Prompting & Prompt Engineering](#prompting--prompt-engineering)
+- [Agent & Workflow Frameworks](#agent--workflow-frameworks)
 - [Frameworks & Tools](#frameworks--tools)
 - [RAG (Retrieval Augmented Generation)](#rag-retrieval-augmented-generation)
 - [Fine-tuning & Training](#fine-tuning--training)
@@ -29,6 +30,7 @@
 - [GitHub Copilot](https://github.com/features/copilot) - Lowest-friction way to add AI assistance to an existing editor and team workflow.
 - [Claude Code](https://claude.ai/code) - Excellent for repo-scale coding, refactors, and code review in terminal-heavy workflows.
 - [OpenAI Codex](https://openai.com/codex) - Strong choice for delegated coding tasks, parallel agent work, and large codebase execution.
+- [OpenCode](https://opencode.ai/) - Open-source AI coding agent for terminal, IDE, and desktop workflows with broad model support.
 - [Windsurf](https://windsurf.com/) - Good all-in-one option if you want a more opinionated AI IDE experience.
 
 ### Explore Carefully
@@ -47,6 +49,7 @@
 - [Google AI Studio](https://aistudio.google.com/) - Worth using when Gemini fits your multimodal or long-context needs.
 - [Mistral AI Console](https://console.mistral.ai/) - Good option when you want a leaner European provider with solid model coverage.
 - [DeepSeek Platform](https://platform.deepseek.com/) - Useful when cost or coding-oriented open-model access matters.
+- [Z.ai Model API](https://z.ai/model-api) - Another hosted model API worth comparing when you want broader provider coverage.
 
 ### Open Models Worth Tracking
 
@@ -81,6 +84,7 @@
 - [LangChain SDK](https://python.langchain.com/) - Powerful ecosystem, but abstraction layers can hide what your app is actually doing.
 - [LlamaIndex](https://www.llamaindex.ai/) - Productive for retrieval-heavy apps, but framework coupling adds complexity quickly.
 - [Together AI API](https://docs.together.ai/) - Useful for model breadth, but multi-provider layers can create operational noise.
+- [Z.ai Quick Start](https://docs.z.ai/guides/overview/quick-start) - Worth a look when evaluating Z.ai's developer onboarding and API ergonomics.
 - [LiveKit Agents](https://docs.livekit.io/agents/v0/overview/) - Excellent for realtime voice or video systems, but overkill unless realtime is central.
 
 ### Operational Essentials
@@ -134,26 +138,53 @@
 - [Learn Prompting](https://learnprompting.org/) - Useful for onboarding and teaching prompt concepts to a team.
 - [Promptfoo](https://promptfoo.dev/) - Important because prompting gets real only when you test it.
 
-### Read With Skepticism
+### Prompt Repositories
 
-- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) - Good for inspiration, not for production methodology.
-- [PromptBase](https://promptbase.com/) - Marketplace popularity is not strong evidence of prompt quality.
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) - Useful for inspiration and reusable starting points, but not a substitute for real app-specific prompt design.
+- [LangSmith Prompt Hub](https://smith.langchain.com/hub) - Useful repository of reusable prompts for LLM pipelines with versioning, sharing, and SDK pull support, but public prompts are community-generated and unverified.
+- [PromptLayer Prompt Registry](https://docs.promptlayer.com/features/prompt-registry/overview) - Strong option when your team needs prompt versioning and runtime retrieval instead of scattering templates across the codebase.
+- [Microsoft Prompty](https://github.com/microsoft/prompty) - Worth tracking if you want prompts stored as first-class files with metadata, portability, and evaluation-friendly workflows.
+
+## Agent & Workflow Frameworks
+
+### Conventions & Building Blocks
+
+- [AGENTS.md](https://agents.md/) - Practical convention for repo-level instructions that help coding agents work with the right context and constraints.
+- [Anthropic Skills](https://github.com/anthropics/skills) - Reusable building blocks for packaging agent capabilities and workflows into composable skills.
+- [Awesome GitHub Copilot](https://github.com/github/awesome-copilot) - High-signal collection of Copilot-focused agents, instructions, skills, hooks, workflows, and plugins worth mining for practical patterns.
+
+### Core
+
+- [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) - Best default when you need explicit state, durable execution, and carefully controlled agent workflows.
+- [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/quickstart/) - Good default when you want lightweight agent primitives, tools, handoffs, and tracing without a big abstraction tax.
+- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) - Good default when you want to get an agent running quickly with broad model and tool integrations.
+
+### Explore Carefully
+
+- [PydanticAI](https://ai.pydantic.dev/agents/) - Promising Python-first agent framework with strong typing and structured outputs, but the ecosystem is still smaller than the bigger defaults.
+- [LlamaIndex](https://docs.llamaindex.ai/en/stable/use_cases/agents/) - Strong for data-heavy agents and workflows, but it is most compelling when retrieval is central to the product.
+- [Haystack](https://docs.haystack.deepset.ai/docs) - Mature framework for agents and RAG pipelines, but best when you actually want its opinionated component model.
+
+### Multi-Agent Systems
+
+- [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/) - Microsoft's current framework for agents and graph-based workflows, and the direct successor to AutoGen and Semantic Kernel for new projects.
+- [CrewAI](https://www.crewai.com/) - Useful for role-based multi-agent prototypes, but teams often outgrow the abstraction and need tighter control.
+
+### Workflow Automation
+
+- [n8n](https://docs.n8n.io/advanced-ai/examples/understand-agents/) - Good fit for low-code AI workflows and tool orchestration, but it is better treated as workflow automation with agent support than as a pure agent framework.
 
 ## Frameworks & Tools
 
 ### Core
 
-- [LangGraph](https://langchain-ai.github.io/langgraph/) - Best default when you need explicit state, control flow, and long-running agent workflows.
-- [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/quickstart/) - Good default for tool-using agents without a huge abstraction tax.
 - [Playwright](https://playwright.dev/docs/intro) - Best default for browser automation and reliable agent actions.
 - [LangSmith](https://smith.langchain.com/) - Worth using if your team is already committed to LangChain or LangGraph.
 - [LangFuse](https://langfuse.com/) - Good open-source observability option when you want traces without full vendor lock-in.
+- [Chainlit](https://docs.chainlit.io/) - Good default for fast internal chat interfaces and operator-facing agent demos.
 
 ### Explore Carefully
 
-- [CrewAI](https://www.crewai.com/) - Useful for role-based multi-agent prototypes, but teams often outgrow the abstraction.
-- [Haystack](https://haystack.deepset.ai/) - Mature and capable, but best when you actually want its opinionated ecosystem.
-- [Chainlit](https://docs.chainlit.io/) - Great for internal chat demos, but not my default for product-grade frontend control.
 - [Streamlit](https://streamlit.io/) - Excellent for internal tooling, but limited once UX becomes a competitive feature.
 
 ## RAG (Retrieval Augmented Generation)
@@ -259,6 +290,14 @@
 
 ## Community & Learning
 
+### Roadmaps & Learning Paths
+
+- [AI Engineer Roadmap](https://roadmap.sh/ai-engineer) - Structured path for the skills, tools, and concepts expected of an AI engineer.
+- [AI Agents Roadmap](https://roadmap.sh/ai-agents) - Useful overview of agent concepts, workflows, tooling, and implementation layers.
+- [Prompt Engineering Roadmap](https://roadmap.sh/prompt-engineering) - Good guided path for building stronger prompting fundamentals and habits.
+- [Vibe Coding Roadmap](https://roadmap.sh/vibe-coding) - Worth skimming if you want a lightweight map of the vibe-coding ecosystem and workflow.
+- [Claude Code Roadmap](https://roadmap.sh/claude-code) - Handy learning path for Claude Code workflows, concepts, and practical usage.
+
 ### High-Signal Newsletters
 
 - [The Batch (Andrew Ng)](https://www.deeplearning.ai/the-batch/) - Consistently useful for broad industry signal.
@@ -328,20 +367,6 @@
 
 ## Daily Utilities
 
-### Formatters & Validators
-
-- [Token Counter (OpenAI)](https://platform.openai.com/tokenizer) - Useful for fast token sanity checks while prototyping prompts.
-- [JSON Formatter](https://jsonformatter.org/) - Handy for debugging structured outputs and payloads.
-- [YAML Validator](https://www.yamllint.com/) - Useful whenever config files start failing silently.
-
-### API & HTTP
-
-- [Bruno](https://www.usebruno.com/) - My default API client because it is lightweight and repo-friendly.
-- [HTTPie](https://httpie.io/) - Great CLI-first option for quick API testing.
-- [Postman](https://www.postman.com/) - Still useful for team collections and shared API workflows.
-
-### General Dev Helpers
-
 - [Context7](https://context7.com/) - Useful for up-to-date docs context and developer lookups.
 - [DevDocs](https://devdocs.io/) - Good unified reference surface when you live in docs all day.
 - [Can I Use](https://caniuse.com/) - Still worth keeping around for frontend compatibility checks.
@@ -352,6 +377,7 @@
 ### Essential Documentation
 
 - [OpenAI Cookbook](https://cookbook.openai.com/) - Best general reference for practical API patterns and examples.
+- [Claude Code Docs](https://code.claude.com/docs/en/overview) - Official documentation hub for Claude Code setup, concepts, and workflows.
 - [Hugging Face Docs](https://huggingface.co/docs) - Default documentation hub for open-model tooling.
 - [LangChain Docs](https://python.langchain.com/docs/get_started/introduction) - Useful reference if your stack already includes LangChain.
 
