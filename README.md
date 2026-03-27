@@ -523,6 +523,7 @@
 
 - [Can I Use](https://caniuse.com/) - Compatibilidad web
 - [DevDocs](https://devdocs.io/) - Documentación unificada
+- [Context7](https://context7.com/) - Documentación y contexto actualizados para código y AI tools
 - [HTTP Status Codes](https://httpstatuses.com/) - Referencia HTTP
 - [Crontab Guru](https://crontab.guru/) - Expresiones cron
 - [Transform Tools](https://transform.tools/) - Convertir código

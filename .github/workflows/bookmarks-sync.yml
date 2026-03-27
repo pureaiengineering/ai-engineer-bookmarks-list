@@ -1,0 +1,27 @@
+name: Verify bookmarks sync
+
+on:
+  push:
+    paths:
+      - "README.md"
+      - "bookmarks.html"
+      - "scripts/sync-bookmarks.ps1"
+      - ".github/workflows/bookmarks-sync.yml"
+  pull_request:
+    paths:
+      - "README.md"
+      - "bookmarks.html"
+      - "scripts/sync-bookmarks.ps1"
+      - ".github/workflows/bookmarks-sync.yml"
+
+jobs:
+  verify:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify bookmarks.html matches README.md
+        shell: pwsh
+        run: ./scripts/sync-bookmarks.ps1 -Check
