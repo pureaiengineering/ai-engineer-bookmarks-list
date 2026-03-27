@@ -1,4 +1,4 @@
-# AI Engineer Bookmarks List
+# Awesome AI Engineer
 
 ---
 
@@ -19,6 +19,8 @@
 - [Papers & Research](#papers--research)
 - [Deployment & MLOps](#deployment--mlops)
 - [Daily Utilities](#daily-utilities)
+- [Additional Resources](#additional-resources)
+- [How to Use This List](#how-to-use-this-list)
 
 ---
 
@@ -44,7 +46,7 @@
 - [Lovable](https://lovable.dev/) - AI-powered web app generation
 - [Replit](https://replit.com/) - Online IDE with AI coding features
 - [Locofy](https://www.locofy.ai/) - Design-to-code AI platform
-- [Google Stitch](https://stitch.google.com/) - Data integration platform
+- [Google Stitch](https://stitch.google.com/) - AI-powered UI and app design tool by Google
 - [Builder.io](https://www.builder.io/) - Headless CMS with AI code generation
 
 ## Models (LLMs)
@@ -55,7 +57,7 @@
 - **[Zhipu AI (Z.ai)](https://open.bigmodel.cn/)** – GLM
 - **[DeepSeek Platform](https://platform.deepseek.com/)** – DeepSeek
 - **[Meta AI (Llama)](https://llama.meta.com/)** – LLAMA
-- **[Alibaba Cloud (DashScope)](https://www.google.com/search?q=https://www.alibabacloud.com/product/dashscope)** – Qwen
+- **[Alibaba Cloud Model Studio (DashScope)](https://www.alibabacloud.com/help/en/model-studio/)** – Qwen
 - **[Mistral AI Console](https://console.mistral.ai/)** – Mistral AI
 
 ### Open Source Models
@@ -114,6 +116,12 @@
 - [OpenAI Node.js](https://github.com/openai/openai-node) - Official Node.js client
 - [LlamaIndex](https://www.llamaindex.ai/) - Data framework
 
+### Voice, Realtime & Multimodal
+
+- [OpenAI Realtime API](https://platform.openai.com/docs/guides/realtime-websocket) - Build low-latency voice and realtime interactions.
+- [OpenAI Audio and Speech](https://platform.openai.com/docs/guides/audio) - Speech-to-text, text-to-speech, and voice agent building blocks.
+- [LiveKit Agents](https://docs.livekit.io/agents/v0/overview/) - Realtime framework for voice, video, and multimodal agents.
+
 ### API Management
 
 - [OpenAI Usage Dashboard](https://platform.openai.com/usage) - Usage dashboard
@@ -130,6 +138,13 @@
 - [OpenAI Tokenizer](https://platform.openai.com/tokenizer) - Official tokenizer
 - [Token Calculator](https://huggingface.co/spaces/Xenova/the-tokenizer-playground) - Universal calculator
 - [Cost Estimator](https://gptforwork.com/tools/openai-chatgpt-api-pricing-calculator) - Cost estimator
+
+### Batch, Caching & Background Jobs
+
+- [OpenAI Batch API](https://platform.openai.com/docs/guides/batch/) - Run large async workloads at lower cost.
+- [OpenAI Prompt Caching](https://platform.openai.com/docs/guides/prompt-caching) - Reduce latency and cost on repeated prompt prefixes.
+- [OpenAI Background Mode](https://platform.openai.com/docs/guides/background) - Run long reasoning tasks asynchronously.
+- [Anthropic Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) - Cache reusable prompt prefixes for Claude apps.
 
 ---
 
@@ -187,6 +202,12 @@
 - [Promptfoo](https://promptfoo.dev/) - Prompt testing
 - [PromptLayer](https://www.promptlayer.com/) - Prompt management
 
+### Guardrails & Structured Outputs
+
+- [OpenAI Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) - Enforce JSON schema-shaped outputs from models.
+- [OpenAI Guardrails Python](https://openai.github.io/openai-guardrails-python/) - Validation and safety checks for LLM applications.
+- [Anthropic Guardrails Guide](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-prompt-leak) - Practical guidance for safer prompt and output handling.
+
 ### Techniques & Patterns
 
 - [Chain-of-Thought Paper](https://arxiv.org/abs/2201.11903) - Original CoT paper
@@ -225,6 +246,12 @@
 - [MetaGPT](https://github.com/geekan/MetaGPT) - Multi-agent framework for development
 - [BabyAGI](https://github.com/yoheinakajima/babyagi) - Simple task framework
 - [LangGraph Agents](https://www.langchain.com/langgraph) - Agent system
+
+### Agent SDKs & Browser Automation
+
+- [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/quickstart/) - Build agents with tools, handoffs, and tracing.
+- [OpenAI Computer Use](https://platform.openai.com/docs/guides/tools-computer-use) - Build browser and computer-using agents.
+- [Playwright](https://playwright.dev/docs/intro) - Browser automation for testing and agent execution loops.
 
 ### Development & Testing
 
@@ -275,6 +302,12 @@
 - [Verba by Weaviate](https://github.com/weaviate/Verba) - RAG application
 - [RAGFlow](https://github.com/infiniflow/ragflow) - Visual framework
 - [RAGs (LlamaIndex)](https://github.com/run-llama/rags) - Templates RAG
+
+### Reranking
+
+- [Cohere Rerank](https://docs.cohere.com/docs/reranking) - API reranking for search and RAG pipelines.
+- [Voyage AI Rerankers](https://docs.voyageai.com/docs/reranker) - Long-context rerankers for retrieval quality.
+- [Sentence Transformers Cross-Encoders](https://www.sbert.net/examples/cross_encoder/applications/README.html) - Open-source reranking models and patterns.
 
 ### Tools & Utils
 
@@ -568,7 +601,7 @@
 - [OpenAI Playground](https://platform.openai.com/playground) - Official playground
 - [ChatGPT](https://chat.openai.com/) - Chat interface
 - [Claude](https://claude.ai/) - Claude interface
-- [Google Gemini](https://bard.google.com/) - Gemini chat
+- [Google Gemini](https://gemini.google.com/) - Gemini chat
 - [Perplexity](https://www.perplexity.ai/) - AI search
 
 ---
@@ -611,5 +644,3 @@
 - **Learning**: Papers, Courses, Community
 - **Production**: Deployment, Monitoring, MLOps
 - **Research**: Papers, Benchmarks, Research Blogs
-
-
