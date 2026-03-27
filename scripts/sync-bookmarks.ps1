@@ -87,7 +87,7 @@ if (-not (Test-Path -LiteralPath $readmePath)) {
 }
 
 $lines = Get-Content -LiteralPath $readmePath
-$root = New-Folder -Title "AI Engineer Bookmarks List"
+$root = New-Folder -Title "Awesome AI Engineer"
 $currentH2 = $null
 $currentH3 = $null
 
@@ -138,8 +138,8 @@ $builder = [System.Text.StringBuilder]::new()
 [void]$builder.AppendLine("     It can be imported into Chrome, Edge, and other browsers.")
 [void]$builder.AppendLine("     Generated from README.md. -->")
 [void]$builder.AppendLine("<META HTTP-EQUIV=""Content-Type"" CONTENT=""text/html; charset=UTF-8"">")
-[void]$builder.AppendLine("<TITLE>AI Engineer Bookmarks List</TITLE>")
-[void]$builder.AppendLine("<H1>AI Engineer Bookmarks List</H1>")
+[void]$builder.AppendLine("<TITLE>Awesome AI Engineer</TITLE>")
+[void]$builder.AppendLine("<H1>Awesome AI Engineer</H1>")
 Render-Folder -Folder $root -Level 0 -Builder $builder
 
 $generatedHtml = $builder.ToString()

@@ -1,13 +1,7 @@
 # Awesome AI Engineer
 
-Curated for production-minded AI engineers. Not exhaustive. Defaults first.
-
----
-
 ## Table of Contents
 
-- [Start Here](#start-here)
-- [Curation Principles](#curation-principles)
 - [AI Coding Tools](#ai-coding-tools)
 - [Models (LLMs)](#models-llms)
 - [APIs & SDKs](#apis--sdks)
@@ -24,28 +18,8 @@ Curated for production-minded AI engineers. Not exhaustive. Defaults first.
 - [Deployment & MLOps](#deployment--mlops)
 - [Daily Utilities](#daily-utilities)
 - [Additional Resources](#additional-resources)
-- [How to Use This List](#how-to-use-this-list)
 
 ---
-
-## Start Here
-
-1. Pick a coding surface from [AI Coding Tools](#ai-coding-tools).
-2. Start with a stable model and SDK stack from [Models (LLMs)](#models-llms) and [APIs & SDKs](#apis--sdks).
-3. Add orchestration from [Frameworks & Tools](#frameworks--tools) only when your app needs it.
-4. Treat retrieval and evals as product work, not side quests: [RAG (Retrieval Augmented Generation)](#rag-retrieval-augmented-generation) and [Evaluation & Testing](#evaluation--testing).
-5. Ship on the lightest deployment path that fits: [Deployment & MLOps](#deployment--mlops).
-
-## Curation Principles
-
-- `maturity` - Defaults go to tools with real adoption, stable docs, and a track record.
-- `practical utility` - Every link should help you build, debug, evaluate, or ship something concrete.
-- `maintenance/adoption` - Active ecosystems beat abandoned repos and one-week hype spikes.
-- `official-source preference` - When possible, prefer official docs, SDKs, and primary sources.
-
-`Core` means "good default for most teams."
-
-`Explore Carefully` means "useful, but only after you know why the default is not enough."
 
 ## AI Coding Tools
 
@@ -392,19 +366,3 @@ Curated for production-minded AI engineers. Not exhaustive. Defaults first.
 - [Full Stack LLM Bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/) - Best high-signal course for applied LLM builders.
 - [Hugging Face Course](https://huggingface.co/learn/nlp-course) - Strong free course for modern NLP and transformer basics.
 - [Fast.ai](https://www.fast.ai/) - Good practical ML education with a strong engineering bent.
-
-## How to Use This List
-
-### Reading Order
-
-- Start with `Core` entries before you explore alternatives.
-- Use `Explore Carefully` only when the default path fails a concrete requirement.
-- Prefer official docs and SDKs over commentary and tool roundups.
-- Revisit this list quarterly, not daily. Constant churn is usually noise.
-
-### Suggested Workflow
-
-- Pick one editor, one model provider, and one SDK before adding more tooling.
-- Add orchestration only after you have a working single-agent or single-call baseline.
-- Add retrieval and evals early if the product depends on knowledge grounding or repeatability.
-- Add deployment and monitoring before scale, not after incidents.
