@@ -7,6 +7,7 @@
 - [AI Coding Tools](#ai-coding-tools)
 - [Models (LLMs)](#models-llms)
 - [APIs & SDKs](#apis--sdks)
+- [MCP (Model Context Protocol)](#mcp-model-context-protocol)
 - [Prompting & Prompt Engineering](#prompting--prompt-engineering)
 - [Frameworks & Tools](#frameworks--tools)
 - [RAG & Vector Databases](#rag-retrieval-augmented-generation)
@@ -69,21 +70,21 @@
 
 ### Model Platforms
 
-- [Hugging Face Models](https://huggingface.co/models) - Hub de modelos
-- [Replicate Explore](https://replicate.com/explore) - Modelos en la nube
-- [Together AI](https://www.together.ai/) - Inferencia de modelos open source
-- [Ollama](https://ollama.ai/) - Ejecutar LLMs localmente
-- [GPT4All](https://gpt4all.io/) - LLMs privados y locales
-- [LM Studio](https://lmstudio.ai/) - Interfaz GUI para LLMs
+- [Hugging Face Models](https://huggingface.co/models) - Model hub
+- [Replicate Explore](https://replicate.com/explore) - Cloud-hosted models
+- [Together AI](https://www.together.ai/) - Open-source model inference
+- [Ollama](https://ollama.ai/) - Run LLMs locally
+- [GPT4All](https://gpt4all.io/) - Private and local LLMs
+- [LM Studio](https://lmstudio.ai/) - GUI for LLMs
 
 ### Comparisons & Leaderboards
 
-- [LMSYS Chatbot Arena](https://chat.lmsys.org/) - Comparación de modelos por votación
-- [Artificial Analysis](https://artificialanalysis.ai/) - Benchmarks y precios
-- [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) - Ranking de modelos open source
-- [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) - Evaluación automática
-- [Can AI Code?](https://huggingface.co/spaces/mike-ravkine/can-ai-code-results) - Benchmark de código
-- [Scale AI Leaderboard](https://scale.com/leaderboard) - Evaluaciones de Scale
+- [LMSYS Chatbot Arena](https://chat.lmsys.org/) - Community model comparison by voting
+- [Artificial Analysis](https://artificialanalysis.ai/) - Benchmarks and pricing
+- [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) - Open-source model leaderboard
+- [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) - Automated evaluation
+- [Can AI Code?](https://huggingface.co/spaces/mike-ravkine/can-ai-code-results) - Coding benchmark
+- [Scale AI Leaderboard](https://scale.com/leaderboard) - Scale evaluations
 
 ### Run local models
 
@@ -97,38 +98,72 @@
 
 ### Official Documentation
 
-- [OpenAI API Reference](https://platform.openai.com/docs/api-reference) - Docs completas
-- [Anthropic API Docs](https://docs.anthropic.com/) - Documentación Claude
+- [OpenAI API Reference](https://platform.openai.com/docs/api-reference) - Full docs
+- [Anthropic API Docs](https://docs.anthropic.com/) - Claude documentation
 - [Google Generative AI](https://ai.google.dev/docs) - Gemini API
-- [Cohere API Docs](https://docs.cohere.com/) - Docs de Cohere
-- [Replicate API](https://replicate.com/docs) - API de Replicate
-- [Together AI API](https://docs.together.ai/) - Docs Together
+- [Cohere API Docs](https://docs.cohere.com/) - Cohere docs
+- [Replicate API](https://replicate.com/docs) - Replicate API
+- [Together AI API](https://docs.together.ai/) - Together docs
 
 ### SDKs & Libraries
 
-- [OpenAI Python SDK](https://github.com/openai/openai-python) - Cliente oficial Python
-- [Anthropic Python SDK](https://github.com/anthropics/anthropic-sdk-python) - Cliente Claude
-- [LangChain SDK](https://python.langchain.com/) - Framework de orquestación
-- [Vercel AI SDK](https://sdk.vercel.ai/) - SDK para aplicaciones AI
-- [OpenAI Node.js](https://github.com/openai/openai-node) - Cliente Node.js
-- [LlamaIndex](https://www.llamaindex.ai/) - Framework de datos
+- [OpenAI Python SDK](https://github.com/openai/openai-python) - Official Python client
+- [Anthropic Python SDK](https://github.com/anthropics/anthropic-sdk-python) - Claude client
+- [LangChain SDK](https://python.langchain.com/) - Orchestration framework
+- [Vercel AI SDK](https://sdk.vercel.ai/) - SDK for AI applications
+- [OpenAI Node.js](https://github.com/openai/openai-node) - Official Node.js client
+- [LlamaIndex](https://www.llamaindex.ai/) - Data framework
 
 ### API Management
 
-- [OpenAI Usage Dashboard](https://platform.openai.com/usage) - Panel de uso
-- [Anthropic Console](https://console.anthropic.com/) - Consola de Claude
-- [Postman](https://www.postman.com/) - Cliente API
-- [Bruno API Client](https://www.usebruno.com/) - Cliente API open source
-- [Insomnia](https://insomnia.rest/) - Cliente REST
-- [Portkey Gateway](https://portkey.ai/) - Gateway para múltiples LLMs
+- [OpenAI Usage Dashboard](https://platform.openai.com/usage) - Usage dashboard
+- [Anthropic Console](https://console.anthropic.com/) - Claude console
+- [Postman](https://www.postman.com/) - API client
+- [Bruno API Client](https://www.usebruno.com/) - Open-source API client
+- [Insomnia](https://insomnia.rest/) - REST client
+- [Portkey Gateway](https://portkey.ai/) - Gateway for multiple LLMs
 
 ### Rate Limits & Pricing
 
-- [OpenAI Pricing](https://openai.com/pricing) - Precios actualizados
-- [Anthropic Pricing](https://www.anthropic.com/pricing) - Precios Claude
-- [OpenAI Tokenizer](https://platform.openai.com/tokenizer) - Contador oficial
-- [Token Calculator](https://huggingface.co/spaces/Xenova/the-tokenizer-playground) - Calculadora universal
-- [Cost Estimator](https://gptforwork.com/tools/openai-chatgpt-api-pricing-calculator) - Estimador de costos
+- [OpenAI Pricing](https://openai.com/pricing) - Up-to-date pricing
+- [Anthropic Pricing](https://www.anthropic.com/pricing) - Claude pricing
+- [OpenAI Tokenizer](https://platform.openai.com/tokenizer) - Official tokenizer
+- [Token Calculator](https://huggingface.co/spaces/Xenova/the-tokenizer-playground) - Universal calculator
+- [Cost Estimator](https://gptforwork.com/tools/openai-chatgpt-api-pricing-calculator) - Cost estimator
+
+---
+
+## MCP (Model Context Protocol)
+
+### Official Docs & Spec
+
+- [Model Context Protocol Docs](https://modelcontextprotocol.io/docs) - Official documentation to learn and get started with MCP.
+- [MCP Specification](https://modelcontextprotocol.io/specification/2025-06-18) - Current official protocol specification.
+- [Architecture](https://modelcontextprotocol.io/specification/2025-06-18/architecture/index) - Host / client / server architecture and responsibility boundaries.
+- [Authorization](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization) - OAuth, discovery metadata, and authorization for HTTP transports.
+- [Security Best Practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) - Risks, mitigations, and MCP security best practices.
+
+### Official SDKs & Dev Tools
+
+- [modelcontextprotocol GitHub Org](https://github.com/modelcontextprotocol) - Official organization with SDKs, spec, registry, and tooling.
+- [modelcontextprotocol/modelcontextprotocol](https://github.com/modelcontextprotocol/modelcontextprotocol) - Official repository for the specification and documentation.
+- [modelcontextprotocol/typescript-sdk](https://github.com/modelcontextprotocol/typescript-sdk) - Official TypeScript SDK for MCP clients and servers.
+- [modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk) - Official Python SDK for MCP clients and servers.
+- [modelcontextprotocol/inspector](https://github.com/modelcontextprotocol/inspector) - Official tool for testing and debugging MCP servers.
+
+### Registry & Discovery
+
+- [Official MCP Registry](https://registry.modelcontextprotocol.io/) - Official registry for discovering published MCP servers.
+- [modelcontextprotocol/registry](https://github.com/modelcontextprotocol/registry) - Open-source implementation of the official registry.
+- [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) - Reference servers maintained by the steering group.
+- [Smithery](https://smithery.ai/docs/getting_started/quickstart_connect) - Useful companion for discovering and connecting MCP servers with one-click setup.
+- [PulseMCP](https://www.pulsemcp.com/servers) - Companion directory for exploring the broader MCP ecosystem.
+
+### GitHub MCP
+
+- [GitHub MCP Server](https://github.com/github/github-mcp-server) - Official GitHub MCP server for repos, issues, PRs, and workflows.
+- [GitHub Docs: Setting up the GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/set-up-the-github-mcp-server) - Official setup guide for the GitHub MCP server.
+- [GitHub Docs: Configure an MCP Registry](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-registry) - MCP registry management for organizations and enterprises.
 
 ---
 
@@ -136,38 +171,38 @@
 
 ### Guides & Documentation
 
-- [OpenAI Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering) - Guía oficial
-- [Anthropic Prompt Library](https://docs.anthropic.com/claude/docs/prompt-engineering) - Biblioteca de prompts
-- [Prompt Engineering Guide](https://www.promptingguide.ai/) - Guía completa (DAIR.AI)
-- [Learn Prompting](https://learnprompting.org/) - Curso interactivo
-- [Microsoft Prompt Guide](https://github.com/microsoft/prompts-for-edu) - Guía educativa
-- [OpenAI Best Practices](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) - Mejores prácticas
+- [OpenAI Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering) - Official guide
+- [Anthropic Prompt Library](https://docs.anthropic.com/claude/docs/prompt-engineering) - Prompt library
+- [Prompt Engineering Guide](https://www.promptingguide.ai/) - Comprehensive guide (DAIR.AI)
+- [Learn Prompting](https://learnprompting.org/) - Interactive course
+- [Microsoft Prompt Guide](https://github.com/microsoft/prompts-for-edu) - Educational guide
+- [OpenAI Best Practices](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) - Best practices
 
 ### Tools
 
-- [PromptPerfect](https://promptperfect.jina.ai/) - Optimizador de prompts
-- [PromptBase](https://promptbase.com/) - Marketplace de prompts
-- [LangChain Hub](https://smith.langchain.com/hub) - Repositorio de prompts
-- [Poe](https://poe.com/) - Plataforma de testing
-- [Promptfoo](https://promptfoo.dev/) - Testing de prompts
-- [PromptLayer](https://www.promptlayer.com/) - Gestión de prompts
+- [PromptPerfect](https://promptperfect.jina.ai/) - Prompt optimizer
+- [PromptBase](https://promptbase.com/) - Prompt marketplace
+- [LangChain Hub](https://smith.langchain.com/hub) - Prompt repository
+- [Poe](https://poe.com/) - Testing platform
+- [Promptfoo](https://promptfoo.dev/) - Prompt testing
+- [PromptLayer](https://www.promptlayer.com/) - Prompt management
 
 ### Techniques & Patterns
 
-- [Chain-of-Thought Paper](https://arxiv.org/abs/2201.11903) - Paper original CoT
+- [Chain-of-Thought Paper](https://arxiv.org/abs/2201.11903) - Original CoT paper
 - [ReAct Prompting](https://arxiv.org/abs/2303.11366) - Reasoning + Acting
-- [Tree of Thoughts](https://arxiv.org/abs/2305.10601) - Exploración de razonamiento
-- [Constitutional AI](https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback) - IA constitucional
-- [Few-Shot Learning](https://arxiv.org/abs/2005.14165) - Aprendizaje con ejemplos
-- [Techniques Repository](https://github.com/dair-ai/Prompt-Engineering-Guide) - Repositorio de técnicas
+- [Tree of Thoughts](https://arxiv.org/abs/2305.10601) - Reasoning exploration
+- [Constitutional AI](https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback) - Constitutional AI
+- [Few-Shot Learning](https://arxiv.org/abs/2005.14165) - Learning with examples
+- [Techniques Repository](https://github.com/dair-ai/Prompt-Engineering-Guide) - Technique repository
 
 ### Collections
 
-- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) - Colección popular
-- [FlowGPT](https://flowgpt.com/) - Comunidad de prompts
-- [ShareGPT](https://sharegpt.com/) - Compartir conversaciones
-- [Snack Prompt](https://snackprompt.com/) - Prompts curados
-- [Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering) - Lista curada
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) - Popular collection
+- [FlowGPT](https://flowgpt.com/) - Prompt community
+- [ShareGPT](https://sharegpt.com/) - Share conversations
+- [Snack Prompt](https://snackprompt.com/) - Curated prompts
+- [Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering) - Curated list
 
 ---
 
@@ -175,39 +210,39 @@
 
 ### Orchestration
 
-- [LangChain Docs](https://python.langchain.com/) - Framework principal
-- [LangGraph](https://langchain-ai.github.io/langgraph/) - Grafos de agentes
-- [LlamaIndex](https://docs.llamaindex.ai/) - Framework de datos
-- [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/) - Framework de Microsoft
-- [Haystack](https://haystack.deepset.ai/) - Framework NLP
-- [Marvin](https://github.com/prefecthq/marvin) - Framework ligero
+- [LangChain Docs](https://python.langchain.com/) - Main framework
+- [LangGraph](https://langchain-ai.github.io/langgraph/) - Agent graphs
+- [LlamaIndex](https://docs.llamaindex.ai/) - Data framework
+- [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/) - Microsoft's framework
+- [Haystack](https://haystack.deepset.ai/) - NLP framework
+- [Marvin](https://github.com/prefecthq/marvin) - Lightweight framework
 
 ### Agents & Automation
 
-- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) - Agente autónomo
-- [CrewAI](https://www.crewai.com/) - Framework multi-agente
-- [SuperAGI](https://superagi.com/) - Plataforma de agentes
-- [MetaGPT](https://github.com/geekan/MetaGPT) - Multi-agente para desarrollo
-- [BabyAGI](https://github.com/yoheinakajima/babyagi) - Framework simple de tareas
-- [LangGraph Agents](https://www.langchain.com/langgraph) - Sistema de agentes
+- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) - Autonomous agent
+- [CrewAI](https://www.crewai.com/) - Multi-agent framework
+- [SuperAGI](https://superagi.com/) - Agent platform
+- [MetaGPT](https://github.com/geekan/MetaGPT) - Multi-agent framework for development
+- [BabyAGI](https://github.com/yoheinakajima/babyagi) - Simple task framework
+- [LangGraph Agents](https://www.langchain.com/langgraph) - Agent system
 
 ### Development & Testing
 
-- [LangSmith](https://smith.langchain.com/) - Plataforma de desarrollo
-- [PromptLayer](https://www.promptlayer.com/) - Observabilidad
-- [Helicone](https://www.helicone.ai/) - Observabilidad y análisis
-- [LangFuse](https://langfuse.com/) - Observabilidad open source
-- [Portkey](https://portkey.ai/) - Gateway y observabilidad
-- [Braintrust](https://braintrust.dev/) - Evaluación y testing
+- [LangSmith](https://smith.langchain.com/) - Development platform
+- [PromptLayer](https://www.promptlayer.com/) - Observability
+- [Helicone](https://www.helicone.ai/) - Observability and analytics
+- [LangFuse](https://langfuse.com/) - Open-source observability
+- [Portkey](https://portkey.ai/) - Gateway and observability
+- [Braintrust](https://braintrust.dev/) - Evaluation and testing
 
 ### UI & Frontends
 
-- [Streamlit](https://streamlit.io/) - Apps Python rápidas
-- [Gradio](https://www.gradio.app/) - Interfaces ML
-- [Chainlit](https://docs.chainlit.io/) - Apps conversacionales
-- [Mesop](https://github.com/google/mesop) - Framework de Google
-- [Vercel AI SDK](https://sdk.vercel.ai/) - SDK para web
-- [Reflex](https://reflex.dev/) - Framework Python full-stack
+- [Streamlit](https://streamlit.io/) - Fast Python apps
+- [Gradio](https://www.gradio.app/) - ML interfaces
+- [Chainlit](https://docs.chainlit.io/) - Conversational apps
+- [Mesop](https://github.com/google/mesop) - Google's framework
+- [Vercel AI SDK](https://sdk.vercel.ai/) - SDK for web
+- [Reflex](https://reflex.dev/) - Full-stack Python framework
 
 ---
 
@@ -215,40 +250,40 @@
 
 ### Vector Databases
 
-- [Pinecone](https://www.pinecone.io/) - Base de datos vectorial managed
-- [Weaviate](https://weaviate.io/) - Base de datos open source
-- [Chroma](https://www.trychroma.com/) - Base de datos embeddings
-- [Qdrant](https://qdrant.tech/) - Motor de búsqueda vectorial
-- [Milvus](https://milvus.io/) - Base de datos vectorial distribuida
-- [pgvector](https://github.com/pgvector/pgvector) - Extensión PostgreSQL
-- [Elasticsearch](https://www.elastic.co/elasticsearch/vector-database) - Search engine con vectores
+- [Pinecone](https://www.pinecone.io/) - Managed vector database
+- [Weaviate](https://weaviate.io/) - Open-source vector database
+- [Chroma](https://www.trychroma.com/) - Embeddings database
+- [Qdrant](https://qdrant.tech/) - Vector search engine
+- [Milvus](https://milvus.io/) - Distributed vector database
+- [pgvector](https://github.com/pgvector/pgvector) - PostgreSQL extension
+- [Elasticsearch](https://www.elastic.co/elasticsearch/vector-database) - Search engine with vector support
 
 ### Embedding Models
 
 - [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings) - text-embedding-3
-- [Sentence Transformers](https://www.sbert.net/) - Modelos open source
-- [Cohere Embed](https://docs.cohere.com/docs/embeddings) - Embeddings multilingües
-- [Voyage AI](https://www.voyageai.com/) - Embeddings especializados
-- [E5 Models](https://huggingface.co/intfloat/e5-large-v2) - Embeddings de alta calidad
-- [Jina Embeddings](https://jina.ai/embeddings/) - Embeddings multimodales
+- [Sentence Transformers](https://www.sbert.net/) - Open-source models
+- [Cohere Embed](https://docs.cohere.com/docs/embeddings) - Multilingual embeddings
+- [Voyage AI](https://www.voyageai.com/) - Specialized embeddings
+- [E5 Models](https://huggingface.co/intfloat/e5-large-v2) - High-quality embeddings
+- [Jina Embeddings](https://jina.ai/embeddings/) - Multimodal embeddings
 
 ### RAG Frameworks
 
-- [LlamaIndex RAG](https://docs.llamaindex.ai/en/stable/getting_started/starter_example.html) - Framework completo
-- [LangChain RAG](https://python.langchain.com/docs/use_cases/question_answering/) - Implementación flexible
-- [Haystack](https://haystack.deepset.ai/) - Framework NLP con RAG
+- [LlamaIndex RAG](https://docs.llamaindex.ai/en/stable/getting_started/starter_example.html) - Comprehensive framework
+- [LangChain RAG](https://python.langchain.com/docs/use_cases/question_answering/) - Flexible implementation
+- [Haystack](https://haystack.deepset.ai/) - NLP framework with RAG
 - [Verba by Weaviate](https://github.com/weaviate/Verba) - RAG application
-- [RAGFlow](https://github.com/infiniflow/ragflow) - Framework visual
+- [RAGFlow](https://github.com/infiniflow/ragflow) - Visual framework
 - [RAGs (LlamaIndex)](https://github.com/run-llama/rags) - Templates RAG
 
 ### Tools & Utils
 
-- [Unstructured.io](https://unstructured.io/) - Procesamiento de documentos
-- [LlamaParse](https://github.com/run-llama/llama_parse) - Parser de documentos
-- [PyPDF2](https://pypdf2.readthedocs.io/) - Manipulación de PDFs
-- [LangChain Loaders](https://python.langchain.com/docs/modules/data_connection/document_loaders/) - Cargadores de documentos
-- [Retrieval Tutorials](https://github.com/FullStackRetrieval-com/RetrievalTutorials) - Tutoriales avanzados
-- [Chunking Strategies](https://www.youtube.com/watch?v=sVcwVQRHIc8) - Video explicativo
+- [Unstructured.io](https://unstructured.io/) - Document processing
+- [LlamaParse](https://github.com/run-llama/llama_parse) - Document parser
+- [PyPDF2](https://pypdf2.readthedocs.io/) - PDF manipulation
+- [LangChain Loaders](https://python.langchain.com/docs/modules/data_connection/document_loaders/) - Document loaders
+- [Retrieval Tutorials](https://github.com/FullStackRetrieval-com/RetrievalTutorials) - Advanced tutorials
+- [Chunking Strategies](https://www.youtube.com/watch?v=sVcwVQRHIc8) - Explainer video
 
 ---
 
@@ -256,38 +291,38 @@
 
 ### Platforms
 
-- [OpenAI Fine-tuning](https://platform.openai.com/docs/guides/fine-tuning) - Fine-tuning oficial
-- [HF AutoTrain](https://huggingface.co/autotrain) - AutoML para LLMs
-- [Together AI Fine-tuning](https://www.together.ai/products/fine-tuning) - Fine-tuning en la nube
-- [Fireworks AI](https://fireworks.ai/fine-tuning) - Plataforma de fine-tuning
-- [Modal Labs](https://modal.com/) - Infraestructura serverless
-- [Anyscale](https://www.anyscale.com/) - Plataforma Ray
+- [OpenAI Fine-tuning](https://platform.openai.com/docs/guides/fine-tuning) - Official fine-tuning
+- [HF AutoTrain](https://huggingface.co/autotrain) - AutoML for LLMs
+- [Together AI Fine-tuning](https://www.together.ai/products/fine-tuning) - Cloud fine-tuning
+- [Fireworks AI](https://fireworks.ai/fine-tuning) - Fine-tuning platform
+- [Modal Labs](https://modal.com/) - Serverless infrastructure
+- [Anyscale](https://www.anyscale.com/) - Ray platform
 
 ### Frameworks
 
-- [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) - Framework completo
+- [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) - Comprehensive framework
 - [PEFT (LoRA)](https://github.com/huggingface/peft) - Parameter-Efficient Fine-Tuning
 - [QLoRA](https://github.com/artidoro/qlora) - Quantized LoRA
-- [Unsloth](https://github.com/unslothai/unsloth) - Fine-tuning rápido
+- [Unsloth](https://github.com/unslothai/unsloth) - Fast fine-tuning
 - [TRL (Transformers RL)](https://github.com/huggingface/trl) - Reinforcement Learning
-- [Lit-GPT](https://github.com/Lightning-AI/lit-gpt) - Fine-tuning eficiente
+- [Lit-GPT](https://github.com/Lightning-AI/lit-gpt) - Efficient fine-tuning
 
 ### Datasets
 
-- [Hugging Face Datasets](https://huggingface.co/datasets) - Hub de datasets
-- [OpenAssistant](https://huggingface.co/datasets/OpenAssistant/oasst1) - Dataset conversacional
-- [Alpaca Dataset](https://github.com/tatsu-lab/stanford_alpaca) - Instrucciones de Stanford
-- [ShareGPT](https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered) - Conversaciones reales
-- [Dolly Dataset](https://github.com/databrickslabs/dolly) - Dataset de Databricks
-- [Guanaco](https://huggingface.co/datasets/timdettmers/openassistant-guanaco) - Dataset multilingüe
+- [Hugging Face Datasets](https://huggingface.co/datasets) - Dataset hub
+- [OpenAssistant](https://huggingface.co/datasets/OpenAssistant/oasst1) - Conversational dataset
+- [Alpaca Dataset](https://github.com/tatsu-lab/stanford_alpaca) - Stanford instruction dataset
+- [ShareGPT](https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered) - Real conversations
+- [Dolly Dataset](https://github.com/databrickslabs/dolly) - Databricks dataset
+- [Guanaco](https://huggingface.co/datasets/timdettmers/openassistant-guanaco) - Multilingual dataset
 
 ### Tutorials & Guides
 
-- [HF Training Guide](https://huggingface.co/docs/transformers/training) - Guía oficial
-- [LoRA Paper](https://arxiv.org/abs/2106.09685) - Paper original
+- [HF Training Guide](https://huggingface.co/docs/transformers/training) - Official guide
+- [LoRA Paper](https://arxiv.org/abs/2106.09685) - Original paper
 - [QLoRA Paper](https://arxiv.org/abs/2305.14314) - Quantization + LoRA
-- [Fine-tuning with TRL](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl) - Tutorial completo
-- [PEFT Tutorial](https://cameronrwolfe.substack.com/p/easily-train-a-specialized-llm-peft) - Guía PEFT
+- [Fine-tuning with TRL](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl) - Comprehensive tutorial
+- [PEFT Tutorial](https://cameronrwolfe.substack.com/p/easily-train-a-specialized-llm-peft) - PEFT guide
 
 ---
 
@@ -295,27 +330,27 @@
 
 ### Official Repositories
 
-- [OpenAI Cookbook](https://cookbook.openai.com/) - Ejemplos oficiales
-- [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook) - Recipes de Claude
-- [LangChain Templates](https://github.com/langchain-ai/langchain/tree/master/templates) - Templates listos
-- [Vercel AI Examples](https://github.com/vercel/ai/tree/main/examples) - Ejemplos web
-- [Modal Examples](https://github.com/modal-labs/modal-examples) - Ejemplos serverless
-- [Semantic Kernel Samples](https://github.com/microsoft/semantic-kernel/tree/main/samples) - Samples de SK
+- [OpenAI Cookbook](https://cookbook.openai.com/) - Official examples
+- [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook) - Claude recipes
+- [LangChain Templates](https://github.com/langchain-ai/langchain/tree/master/templates) - Ready-to-use templates
+- [Vercel AI Examples](https://github.com/vercel/ai/tree/main/examples) - Web examples
+- [Modal Examples](https://github.com/modal-labs/modal-examples) - Serverless examples
+- [Semantic Kernel Samples](https://github.com/microsoft/semantic-kernel/tree/main/samples) - Semantic Kernel samples
 
 ### GitHub Collections
 
-- [Awesome LLM](https://github.com/Hannibal046/Awesome-LLM) - Lista curada de recursos
-- [Awesome LangChain](https://github.com/kyrolabs/awesome-langchain) - Recursos LangChain
-- [Awesome ChatGPT](https://github.com/humanloop/awesome-chatgpt) - Recursos ChatGPT
-- [Awesome Generative AI](https://github.com/steven2358/awesome-generative-ai) - IA generativa
-- [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - Agentes IA
+- [Awesome LLM](https://github.com/Hannibal046/Awesome-LLM) - Curated resource list
+- [Awesome LangChain](https://github.com/kyrolabs/awesome-langchain) - LangChain resources
+- [Awesome ChatGPT](https://github.com/humanloop/awesome-chatgpt) - ChatGPT resources
+- [Awesome Generative AI](https://github.com/steven2358/awesome-generative-ai) - Generative AI
+- [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - AI agents
 
 ### Code Playgrounds
 
-- [GitHub Gists](https://gist.github.com/) - Snippets compartidos
-- [Replit Templates](https://replit.com/@templates) - Templates interactivos
-- [StackBlitz](https://stackblitz.com/) - IDE online
-- [CodeSandbox](https://codesandbox.io/) - Sandbox web
+- [GitHub Gists](https://gist.github.com/) - Shared snippets
+- [Replit Templates](https://replit.com/@templates) - Interactive templates
+- [StackBlitz](https://stackblitz.com/) - Online IDE
+- [CodeSandbox](https://codesandbox.io/) - Web sandbox
 - [CodePen](https://codepen.io/) - Playground frontend
 
 ---
@@ -324,33 +359,33 @@
 
 ### Data Platforms
 
-- [Hugging Face Datasets](https://huggingface.co/datasets) - Hub principal
-- [Kaggle Datasets](https://www.kaggle.com/datasets) - Competencias y datos
-- [Papers with Code Datasets](https://paperswithcode.com/datasets) - Datasets de papers
-- [UCI Machine Learning](https://archive.ics.uci.edu/) - Repositorio clásico
-- [Google Dataset Search](https://datasetsearch.research.google.com/) - Buscador de Google
+- [Hugging Face Datasets](https://huggingface.co/datasets) - Main hub
+- [Kaggle Datasets](https://www.kaggle.com/datasets) - Competitions and datasets
+- [Papers with Code Datasets](https://paperswithcode.com/datasets) - Datasets from papers
+- [UCI Machine Learning](https://archive.ics.uci.edu/) - Classic repository
+- [Google Dataset Search](https://datasetsearch.research.google.com/) - Google dataset search
 
 ### Data for LLMs
 
-- [The Pile](https://pile.eleuther.ai/) - Dataset masivo de texto
-- [Common Crawl](https://commoncrawl.org/) - Web crawl abierto
+- [The Pile](https://pile.eleuther.ai/) - Massive text dataset
+- [Common Crawl](https://commoncrawl.org/) - Open web crawl
 - [C4 Dataset](https://huggingface.co/datasets/c4) - Colossal Clean Crawled Corpus
-- [RedPajama](https://github.com/togethercomputer/RedPajama-Data) - Dataset open source
-- [LAION](https://laion.ai/) - Datasets multimodales
+- [RedPajama](https://github.com/togethercomputer/RedPajama-Data) - Open-source dataset
+- [LAION](https://laion.ai/) - Multimodal datasets
 
 ### Synthetic Data
 
-- [Gretel.ai](https://gretel.ai/) - Datos sintéticos con IA
-- [Mostly AI](https://mostly.ai/) - Generación de datos
-- [Synthetic Data Vault](https://sdv.dev/) - Biblioteca open source
-- [DataCebo](https://www.datacebo.com/) - Plataforma de datos sintéticos
+- [Gretel.ai](https://gretel.ai/) - AI-generated synthetic data
+- [Mostly AI](https://mostly.ai/) - Data generation
+- [Synthetic Data Vault](https://sdv.dev/) - Open-source library
+- [DataCebo](https://www.datacebo.com/) - Synthetic data platform
 
 ### Data Tools
 
-- [Pandas AI](https://github.com/gventuri/pandas-ai) - Análisis con IA
-- [DVC](https://dvc.org/) - Control de versiones de datos
-- [Label Studio](https://labelstud.io/) - Anotación de datos
-- [Cleanlab](https://cleanlab.ai/) - Limpieza de datos con IA
+- [Pandas AI](https://github.com/gventuri/pandas-ai) - AI-assisted analysis
+- [DVC](https://dvc.org/) - Data version control
+- [Label Studio](https://labelstud.io/) - Data annotation
+- [Cleanlab](https://cleanlab.ai/) - AI-assisted data cleaning
 
 ---
 
@@ -358,29 +393,29 @@
 
 ### Evaluation Frameworks
 
-- [LangSmith Evaluations](https://smith.langchain.com/) - Evaluación integrada
-- [Phoenix (Arize AI)](https://docs.arize.com/phoenix) - Observabilidad ML
-- [PromptFoo](https://promptfoo.dev/) - Testing de prompts
-- [RAGAS](https://github.com/explodinggradients/ragas) - Evaluación RAG
-- [DeepEval](https://github.com/confident-ai/deepeval) - Framework de testing
-- [OpenAI Evals](https://github.com/openai/evals) - Framework oficial
+- [LangSmith Evaluations](https://smith.langchain.com/) - Integrated evaluation
+- [Phoenix (Arize AI)](https://docs.arize.com/phoenix) - ML observability
+- [PromptFoo](https://promptfoo.dev/) - Prompt testing
+- [RAGAS](https://github.com/explodinggradients/ragas) - RAG evaluation
+- [DeepEval](https://github.com/confident-ai/deepeval) - Testing framework
+- [OpenAI Evals](https://github.com/openai/evals) - Official framework
 
 ### Benchmarks
 
 - [MMLU](https://github.com/hendrycks/test) - Massive Multitask Language Understanding
 - [HellaSwag](https://rowanzellers.com/hellaswag/) - Commonsense reasoning
-- [TruthfulQA](https://github.com/sylinrl/TruthfulQA) - Veracidad
-- [HumanEval](https://github.com/openai/human-eval) - Evaluación de código
-- [GSM8K](https://github.com/openai/grade-school-math) - Matemáticas
+- [TruthfulQA](https://github.com/sylinrl/TruthfulQA) - Truthfulness
+- [HumanEval](https://github.com/openai/human-eval) - Code evaluation
+- [GSM8K](https://github.com/openai/grade-school-math) - Math
 - [BIG-bench](https://bigbench.github.io/) - Beyond the Imitation Game
 
 ### Monitoring
 
-- [LangFuse](https://langfuse.com/) - Observabilidad open source
-- [Helicone](https://www.helicone.ai/) - Observabilidad y análisis
-- [LangWatch](https://www.langwatch.ai/) - Monitoring de LLMs
-- [Weights & Biases](https://wandb.ai/) - Experimentos ML
-- [MLflow](https://mlflow.org/) - Plataforma MLOps
+- [LangFuse](https://langfuse.com/) - Open-source observability
+- [Helicone](https://www.helicone.ai/) - Observability and analytics
+- [LangWatch](https://www.langwatch.ai/) - LLM monitoring
+- [Weights & Biases](https://wandb.ai/) - ML experiments
+- [MLflow](https://mlflow.org/) - MLOps platform
 
 ---
 
@@ -388,43 +423,43 @@
 
 ### Reddit
 
-- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/) - Comunidad ML
-- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) - LLMs locales
-- [r/ArtificialIntelligence](https://www.reddit.com/r/ArtificialIntelligence/) - IA general
+- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/) - ML community
+- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) - Local LLMs
+- [r/ArtificialIntelligence](https://www.reddit.com/r/ArtificialIntelligence/) - General AI
 - [r/LanguageTechnology](https://www.reddit.com/r/LanguageTechnology/) - NLP
 - [r/LangChain](https://www.reddit.com/r/LangChain/) - LangChain
 
 ### Discord & Communities
 
-- [LangChain Discord](https://discord.gg/langchain) - Comunidad oficial
+- [LangChain Discord](https://discord.gg/langchain) - Official community
 - [Hugging Face Discord](https://discord.gg/hugging-face) - HF community
-- [OpenAI Community](https://discord.gg/openai) - Comunidad OpenAI
-- [AI Engineering Discord](https://discord.gg/fVyRjgB3rW) - Ingeniería AI
+- [OpenAI Community](https://discord.gg/openai) - OpenAI community
+- [AI Engineering Discord](https://discord.gg/fVyRjgB3rW) - AI engineering
 - [MLOps Community](https://mlops.community/) - MLOps practitioners
 
 ### Newsletters
 
 - [The Batch (Andrew Ng)](https://www.deeplearning.ai/the-batch/) - DeepLearning.AI
-- [The Gradient](https://thegradient.pub/) - Research y análisis
-- [TLDR AI](https://tldr.tech/ai) - Noticias diarias
-- [The Rundown AI](https://www.therundown.ai/) - Resumen diario
+- [The Gradient](https://thegradient.pub/) - Research and analysis
+- [TLDR AI](https://tldr.tech/ai) - Daily news
+- [The Rundown AI](https://www.therundown.ai/) - Daily roundup
 - [Import AI](https://jack-clark.net/) - Jack Clark
 
 ### YouTube Channels
 
 - [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy) - Tutorials deep learning
-- [AI Explained](https://www.youtube.com/@aiexplained-official) - Explicaciones IA
-- [Sam Witteveen](https://www.youtube.com/@samwitteveenai) - Tutoriales LangChain
-- [Matthew Berman](https://www.youtube.com/@mreflow) - Reviews y tutoriales
+- [AI Explained](https://www.youtube.com/@aiexplained-official) - AI explainers
+- [Sam Witteveen](https://www.youtube.com/@samwitteveenai) - LangChain tutorials
+- [Matthew Berman](https://www.youtube.com/@mreflow) - Reviews and tutorials
 - [1littlecoder](https://www.youtube.com/@1littlecoder) - Coding tutorials
 
 ### Podcasts
 
 - [Latent Space](https://www.latent.space/podcast) - AI Engineering
-- [Practical AI](https://changelog.com/practicalai) - AI práctica
+- [Practical AI](https://changelog.com/practicalai) - Practical AI
 - [TWIML AI](https://twimlai.com/) - This Week in ML & AI
-- [Lex Fridman](https://lexfridman.com/podcast/) - Conversaciones profundas
-- [The Cognitive Revolution](https://www.cognitiverevolution.ai/) - Impacto AI
+- [Lex Fridman](https://lexfridman.com/podcast/) - In-depth conversations
+- [The Cognitive Revolution](https://www.cognitiverevolution.ai/) - AI impact
 
 ---
 
@@ -432,26 +467,26 @@
 
 ### Repositories
 
-- [arXiv cs.AI](https://arxiv.org/list/cs.AI/recent) - Papers de IA
+- [arXiv cs.AI](https://arxiv.org/list/cs.AI/recent) - AI papers
 - [arXiv cs.CL](https://arxiv.org/list/cs.CL/recent) - Computational Linguistics
-- [Papers with Code](https://paperswithcode.com/) - Papers con implementaciones
-- [Semantic Scholar](https://www.semanticscholar.org/) - Buscador académico
-- [Connected Papers](https://www.connectedpapers.com/) - Grafos de papers
+- [Papers with Code](https://paperswithcode.com/) - Papers with implementations
+- [Semantic Scholar](https://www.semanticscholar.org/) - Academic search engine
+- [Connected Papers](https://www.connectedpapers.com/) - Paper graphs
 
 ### Curated Collections
 
-- [Awesome LLM Papers](https://github.com/Hannibal046/Awesome-LLM#papers) - Papers importantes
-- [ML Papers of the Week](https://github.com/dair-ai/ML-Papers-of-the-Week) - Curación semanal
-- [Applied ML Papers](https://github.com/eugeneyan/applied-ml) - Papers aplicados
-- [Arxiv Sanity](https://arxiv-sanity-lite.com/) - Navegador de papers
+- [Awesome LLM Papers](https://github.com/Hannibal046/Awesome-LLM#papers) - Important papers
+- [ML Papers of the Week](https://github.com/dair-ai/ML-Papers-of-the-Week) - Weekly curation
+- [Applied ML Papers](https://github.com/eugeneyan/applied-ml) - Applied ML papers
+- [Arxiv Sanity](https://arxiv-sanity-lite.com/) - Paper browser
 
 ### Research Blogs
 
-- [OpenAI Research](https://openai.com/research/) - Blog oficial OpenAI
-- [Anthropic Research](https://www.anthropic.com/research) - Research de Claude
-- [Google AI Blog](https://blog.google/technology/ai/) - Blog de Google
-- [Meta AI Research](https://ai.meta.com/research/) - Research de Meta
-- [DeepMind](https://www.deepmind.com/research) - Research de DeepMind
+- [OpenAI Research](https://openai.com/research/) - Official OpenAI blog
+- [Anthropic Research](https://www.anthropic.com/research) - Claude research
+- [Google AI Blog](https://blog.google/technology/ai/) - Google's blog
+- [Meta AI Research](https://ai.meta.com/research/) - Meta research
+- [DeepMind](https://www.deepmind.com/research) - DeepMind research
 
 ---
 
@@ -459,36 +494,36 @@
 
 ### Hosting & Inference
 
-- [Modal](https://modal.com/) - Serverless para ML
-- [Replicate](https://replicate.com/) - Hosting de modelos
-- [HF Inference Endpoints](https://huggingface.co/inference-endpoints) - Endpoints managed
-- [Together AI](https://www.together.ai/) - Inferencia optimizada
-- [Fireworks AI](https://fireworks.ai/) - Inferencia rápida
+- [Modal](https://modal.com/) - Serverless for ML
+- [Replicate](https://replicate.com/) - Model hosting
+- [HF Inference Endpoints](https://huggingface.co/inference-endpoints) - Managed endpoints
+- [Together AI](https://www.together.ai/) - Optimized inference
+- [Fireworks AI](https://fireworks.ai/) - Fast inference
 - [RunPod](https://www.runpod.io/) - GPU cloud
 - [Banana.dev](https://www.banana.dev/) - Serverless GPU
 
 ### Serverless & Cloud
 
-- [Vercel AI](https://vercel.com/ai) - Deploy de apps IA
-- [AWS Bedrock](https://aws.amazon.com/bedrock/) - LLMs en AWS
-- [Google Vertex AI](https://cloud.google.com/vertex-ai) - Plataforma ML de Google
-- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) - OpenAI en Azure
+- [Vercel AI](https://vercel.com/ai) - AI app deployment
+- [AWS Bedrock](https://aws.amazon.com/bedrock/) - LLMs on AWS
+- [Google Vertex AI](https://cloud.google.com/vertex-ai) - Google's ML platform
+- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) - OpenAI on Azure
 - [Cloudflare AI](https://developers.cloudflare.com/workers-ai/) - Workers AI
 
 ### Containerization & Serving
 
-- [Docker Hub](https://hub.docker.com/) - Imágenes Docker
-- [vLLM](https://github.com/vllm-project/vllm) - Inferencia rápida
-- [Text Generation Inference](https://github.com/huggingface/text-generation-inference) - TGI de HF
+- [Docker Hub](https://hub.docker.com/) - Docker images
+- [vLLM](https://github.com/vllm-project/vllm) - Fast inference
+- [Text Generation Inference](https://github.com/huggingface/text-generation-inference) - Hugging Face TGI
 - [Triton Inference Server](https://github.com/triton-inference-server/server) - NVIDIA Triton
 - [BentoML](https://www.bentoml.com/) - ML serving framework
-- [Ray Serve](https://www.ray.io/ray-serve) - Serving distribuido
+- [Ray Serve](https://www.ray.io/ray-serve) - Distributed serving
 
 ### Monitoring & Observability
 
-- [Grafana](https://grafana.com/) - Visualización de métricas
-- [Prometheus](https://prometheus.io/) - Monitoring y alertas
-- [DataDog](https://www.datadoghq.com/) - Observabilidad cloud
+- [Grafana](https://grafana.com/) - Metrics visualization
+- [Prometheus](https://prometheus.io/) - Monitoring and alerts
+- [DataDog](https://www.datadoghq.com/) - Cloud observability
 - [New Relic](https://newrelic.com/) - Application monitoring
 - [Sentry](https://sentry.io/) - Error tracking
 
@@ -498,39 +533,39 @@
 
 ### Formatters & Validators
 
-- [JSON Formatter](https://jsonformatter.org/) - Formatear y validar JSON
-- [YAML Validator](https://www.yamllint.com/) - Validador YAML
-- [Markdown Editor](https://dillinger.io/) - Editor online
-- [Token Counter (OpenAI)](https://platform.openai.com/tokenizer) - Contador oficial
-- [Base64 Encoder/Decoder](https://www.base64encode.org/) - Codificador base64
+- [JSON Formatter](https://jsonformatter.org/) - Format and validate JSON
+- [YAML Validator](https://www.yamllint.com/) - YAML validator
+- [Markdown Editor](https://dillinger.io/) - Online editor
+- [Token Counter (OpenAI)](https://platform.openai.com/tokenizer) - Official tokenizer
+- [Base64 Encoder/Decoder](https://www.base64encode.org/) - Base64 encoder/decoder
 
 ### Regex & Text
 
-- [Regex101](https://regex101.com/) - Testing y explicación
-- [RegExr](https://regexr.com/) - Editor visual
-- [Diff Checker](https://www.diffchecker.com/) - Comparar textos
-- [Character Counter](https://wordcounter.net/) - Contador de caracteres
+- [Regex101](https://regex101.com/) - Testing and explanation
+- [RegExr](https://regexr.com/) - Visual editor
+- [Diff Checker](https://www.diffchecker.com/) - Compare texts
+- [Character Counter](https://wordcounter.net/) - Character counter
 
 ### API Testing
 
-- [Postman](https://www.postman.com/) - Cliente API completo
-- [Insomnia](https://insomnia.rest/) - Cliente REST
-- [Bruno](https://www.usebruno.com/) - Cliente open source
-- [HTTPie](https://httpie.io/) - Cliente CLI
-- [cURL Converter](https://curlconverter.com/) - Convertir cURL
+- [Postman](https://www.postman.com/) - Full API client
+- [Insomnia](https://insomnia.rest/) - REST client
+- [Bruno](https://www.usebruno.com/) - Open-source client
+- [HTTPie](https://httpie.io/) - CLI client
+- [cURL Converter](https://curlconverter.com/) - Convert cURL
 
 ### Dev Tools
 
-- [Can I Use](https://caniuse.com/) - Compatibilidad web
-- [DevDocs](https://devdocs.io/) - Documentación unificada
-- [Context7](https://context7.com/) - Documentación y contexto actualizados para código y AI tools
-- [HTTP Status Codes](https://httpstatuses.com/) - Referencia HTTP
-- [Crontab Guru](https://crontab.guru/) - Expresiones cron
-- [Transform Tools](https://transform.tools/) - Convertir código
+- [Can I Use](https://caniuse.com/) - Web compatibility
+- [DevDocs](https://devdocs.io/) - Unified documentation
+- [Context7](https://context7.com/) - Up-to-date documentation and context for code and AI tools
+- [HTTP Status Codes](https://httpstatuses.com/) - HTTP reference
+- [Crontab Guru](https://crontab.guru/) - Cron expression helper
+- [Transform Tools](https://transform.tools/) - Transform code
 
 ### AI Tools
 
-- [OpenAI Playground](https://platform.openai.com/playground) - Playground oficial
+- [OpenAI Playground](https://platform.openai.com/playground) - Official playground
 - [ChatGPT](https://chat.openai.com/) - Chat interface
 - [Claude](https://claude.ai/) - Claude interface
 - [Google Gemini](https://bard.google.com/) - Gemini chat
@@ -542,10 +577,10 @@
 
 ### Online Courses
 
-- [DeepLearning.AI](https://www.deeplearning.ai/) - Cursos de Andrew Ng
+- [DeepLearning.AI](https://www.deeplearning.ai/) - Andrew Ng courses
 - [Fast.ai](https://www.fast.ai/) - Practical deep learning
-- [Hugging Face Course](https://huggingface.co/learn/nlp-course) - NLP gratuito
-- [Full Stack LLM Bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/) - LLM completo
+- [Hugging Face Course](https://huggingface.co/learn/nlp-course) - Free NLP course
+- [Full Stack LLM Bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/) - Comprehensive LLM bootcamp
 
 ### Books
 
@@ -555,9 +590,9 @@
 
 ### Essential Documentation
 
-- [Hugging Face Docs](https://huggingface.co/docs) - Documentación completa
-- [LangChain Docs](https://python.langchain.com/docs/get_started/introduction) - Guías y API
-- [OpenAI Cookbook](https://cookbook.openai.com/) - Ejemplos prácticos
+- [Hugging Face Docs](https://huggingface.co/docs) - Comprehensive documentation
+- [LangChain Docs](https://python.langchain.com/docs/get_started/introduction) - Guides and API
+- [OpenAI Cookbook](https://cookbook.openai.com/) - Practical examples
 
 ---
 
@@ -576,3 +611,5 @@
 - **Learning**: Papers, Courses, Community
 - **Production**: Deployment, Monitoring, MLOps
 - **Research**: Papers, Benchmarks, Research Blogs
+
+
