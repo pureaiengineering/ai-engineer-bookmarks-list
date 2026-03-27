@@ -1,16 +1,20 @@
 # Awesome AI Engineer
 
+Curated for production-minded AI engineers. Not exhaustive. Defaults first.
+
 ---
 
 ## Table of Contents
 
+- [Start Here](#start-here)
+- [Curation Principles](#curation-principles)
 - [AI Coding Tools](#ai-coding-tools)
 - [Models (LLMs)](#models-llms)
 - [APIs & SDKs](#apis--sdks)
 - [MCP (Model Context Protocol)](#mcp-model-context-protocol)
 - [Prompting & Prompt Engineering](#prompting--prompt-engineering)
 - [Frameworks & Tools](#frameworks--tools)
-- [RAG & Vector Databases](#rag-retrieval-augmented-generation)
+- [RAG (Retrieval Augmented Generation)](#rag-retrieval-augmented-generation)
 - [Fine-tuning & Training](#fine-tuning--training)
 - [Code Examples & Snippets](#code-examples--snippets)
 - [Datasets & Resources](#datasets--resources)
@@ -24,623 +28,383 @@
 
 ---
 
+## Start Here
+
+1. Pick a coding surface from [AI Coding Tools](#ai-coding-tools).
+2. Start with a stable model and SDK stack from [Models (LLMs)](#models-llms) and [APIs & SDKs](#apis--sdks).
+3. Add orchestration from [Frameworks & Tools](#frameworks--tools) only when your app needs it.
+4. Treat retrieval and evals as product work, not side quests: [RAG (Retrieval Augmented Generation)](#rag-retrieval-augmented-generation) and [Evaluation & Testing](#evaluation--testing).
+5. Ship on the lightest deployment path that fits: [Deployment & MLOps](#deployment--mlops).
+
+## Curation Principles
+
+- `maturity` - Defaults go to tools with real adoption, stable docs, and a track record.
+- `practical utility` - Every link should help you build, debug, evaluate, or ship something concrete.
+- `maintenance/adoption` - Active ecosystems beat abandoned repos and one-week hype spikes.
+- `official-source preference` - When possible, prefer official docs, SDKs, and primary sources.
+
+`Core` means "good default for most teams."
+
+`Explore Carefully` means "useful, but only after you know why the default is not enough."
+
 ## AI Coding Tools
 
-### IDEs & Editors (AI-native)
+### Core
 
-- [Cursor](https://cursor.com/) - AI-first code editor with built-in chat and refactoring tools.
-- [Windsurf](https://windsurf.com/) - AI-enhanced IDE for productivity and code navigation.
-- [Antigravity Google](https://antigravity.google/) - AI-powered coding in Google.
+- [Cursor](https://cursor.com/) - Strong default if you want an AI-native editor on top of a familiar VS Code workflow.
+- [GitHub Copilot](https://github.com/features/copilot) - Lowest-friction way to add AI assistance to an existing editor and team workflow.
+- [Claude Code](https://claude.ai/code) - Excellent for repo-scale coding, refactors, and code review in terminal-heavy workflows.
+- [OpenAI Codex](https://openai.com/codex) - Strong choice for delegated coding tasks, parallel agent work, and large codebase execution.
+- [Windsurf](https://windsurf.com/) - Good all-in-one option if you want a more opinionated AI IDE experience.
 
-### Extensions & Plugins
+### Explore Carefully
 
-- [GitHub Copilot](https://github.com/features/copilot) - AI-powered code completion and suggestions for multiple languages.
-- [Claude Code](https://claude.ai/code) - AI assistant for coding and code review.
-- [OpenAI Codex](https://openai.com/codex) - AI model for code generation and natural language programming.
-- [OpenCode](https://opencode.ai/) - Collaborative coding platform with AI features.
-
-### AI UI & App Generators
-
-- [v0 by Vercel](https://v0.dev/) - AI-powered UI generator by Vercel for React components.
-- [Bolt.new](https://bolt.new/) - AI-powered web development environment
-- [Lovable](https://lovable.dev/) - AI-powered web app generation
-- [Replit](https://replit.com/) - Online IDE with AI coding features
-- [Locofy](https://www.locofy.ai/) - Design-to-code AI platform
-- [Google Stitch](https://stitch.google.com/) - AI-powered UI and app design tool by Google
-- [Builder.io](https://www.builder.io/) - Headless CMS with AI code generation
+- [v0 by Vercel](https://v0.dev/) - Great for fast UI ideation, but generated code still needs real engineering review.
+- [Bolt.new](https://bolt.new/) - Fast for demos and throwaway prototypes, but teams often outgrow the workflow in production repos.
+- [Lovable](https://lovable.dev/) - Useful for quick product mockups, but output quality varies a lot as app complexity rises.
+- [Replit](https://replit.com/) - Handy for browser-first experiments, but not my default for serious long-lived codebases.
 
 ## Models (LLMs)
 
-- **[OpenAI Platform](https://platform.openai.com/)** – GPT-5 / Codex
-- **[Anthropic Console](https://console.anthropic.com/)** – Claude Opus / Sonnet
-- **[Google AI Studio](https://aistudio.google.com/)** – Gemini
-- **[Zhipu AI (Z.ai)](https://open.bigmodel.cn/)** – GLM
-- **[DeepSeek Platform](https://platform.deepseek.com/)** – DeepSeek
-- **[Meta AI (Llama)](https://llama.meta.com/)** – LLAMA
-- **[Alibaba Cloud Model Studio (DashScope)](https://www.alibabacloud.com/help/en/model-studio/)** – Qwen
-- **[Mistral AI Console](https://console.mistral.ai/)** – Mistral AI
+### Default API Platforms
 
-### Open Source Models
+- [OpenAI Platform](https://platform.openai.com/) - Best default if you want strong frontier models, broad tooling, and official developer ergonomics.
+- [Anthropic Console](https://console.anthropic.com/) - Strong alternative for coding, writing, and safety-sensitive assistant behavior.
+- [Google AI Studio](https://aistudio.google.com/) - Worth using when Gemini fits your multimodal or long-context needs.
+- [Mistral AI Console](https://console.mistral.ai/) - Good option when you want a leaner European provider with solid model coverage.
+- [DeepSeek Platform](https://platform.deepseek.com/) - Useful when cost or coding-oriented open-model access matters.
 
-- [Meta Llama](https://llama.meta.com/) - Llama 3, 3.1, 3.2
-- [Mixtral](https://mistral.ai/news/mixtral-of-experts/) - Mixtral 8x7B, 8x22B
-- [Falcon](https://falconllm.tii.ae/) - Falcon 180B
-- [MPT](https://www.mosaicml.com/mpt) - MosaicML MPT-7B, 30B
-- [StableLM](https://stability.ai/stablediffusion) - Stability AI
-- [DeepSeek](https://www.deepseek.com/) - DeepSeek Coder
-- [Qwen](https://www.alibaba.com/qwen) - Alibaba Qwen
+### Open Models Worth Tracking
 
-### Model Platforms
+- [Meta Llama](https://llama.meta.com/) - Baseline open-model family with strong ecosystem support.
+- [DeepSeek](https://www.deepseek.com/) - Worth tracking for coding-capable open models and aggressive price-performance pressure.
+- [Qwen](https://www.alibaba.com/qwen) - Strong multilingual open-model family with broad community adoption.
 
-- [Hugging Face Models](https://huggingface.co/models) - Model hub
-- [Replicate Explore](https://replicate.com/explore) - Cloud-hosted models
-- [Together AI](https://www.together.ai/) - Open-source model inference
-- [Ollama](https://ollama.ai/) - Run LLMs locally
-- [GPT4All](https://gpt4all.io/) - Private and local LLMs
-- [LM Studio](https://lmstudio.ai/) - GUI for LLMs
+### Compare Before Switching
 
-### Comparisons & Leaderboards
+- [Artificial Analysis](https://artificialanalysis.ai/) - Best single place to sanity-check benchmark and pricing claims.
+- [LMSYS Chatbot Arena](https://chat.lmsys.org/) - Useful for rough human preference signals, not as a final buying decision.
+- [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) - Good for open-model comparisons, but benchmark scores still need context.
 
-- [LMSYS Chatbot Arena](https://chat.lmsys.org/) - Community model comparison by voting
-- [Artificial Analysis](https://artificialanalysis.ai/) - Benchmarks and pricing
-- [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) - Open-source model leaderboard
-- [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) - Automated evaluation
-- [Can AI Code?](https://huggingface.co/spaces/mike-ravkine/can-ai-code-results) - Coding benchmark
-- [Scale AI Leaderboard](https://scale.com/leaderboard) - Scale evaluations
+### Run Local Models
 
-### Run local models
-
-- [Ollama](https://ollama.com) - Run LLMs locally (Llama, Mistral, Qwen, Phi...)
-- [LM Studio](https://lmstudio.ai) - GUI for downloading and running local models
-- [Jan.ai](https://jan.ai) - Open source alternative with OpenAI-compatible local API
-
----
+- [Ollama](https://ollama.com) - Easiest default for running local models on a developer machine.
+- [LM Studio](https://lmstudio.ai) - Good GUI-first option for local experimentation and model downloads.
+- [Jan.ai](https://jan.ai) - Worth a look if you want a more OpenAI-like local API experience.
 
 ## APIs & SDKs
 
-### Official Documentation
+### Core
 
-- [OpenAI API Reference](https://platform.openai.com/docs/api-reference) - Full docs
-- [Anthropic API Docs](https://docs.anthropic.com/) - Claude documentation
-- [Google Generative AI](https://ai.google.dev/docs) - Gemini API
-- [Cohere API Docs](https://docs.cohere.com/) - Cohere docs
-- [Replicate API](https://replicate.com/docs) - Replicate API
-- [Together AI API](https://docs.together.ai/) - Together docs
+- [OpenAI API Reference](https://platform.openai.com/docs/api-reference) - Best default starting point for shipping against a major model API.
+- [Anthropic API Docs](https://docs.anthropic.com/) - Clear docs for Claude integrations and prompt patterns.
+- [OpenAI Python SDK](https://github.com/openai/openai-python) - Official client for production Python services and scripts.
+- [OpenAI Node.js](https://github.com/openai/openai-node) - Official client for JavaScript and TypeScript applications.
+- [Vercel AI SDK](https://sdk.vercel.ai/) - Excellent if you are building AI UX in web apps and want streaming primitives fast.
 
-### SDKs & Libraries
+### Explore Carefully
 
-- [OpenAI Python SDK](https://github.com/openai/openai-python) - Official Python client
-- [Anthropic Python SDK](https://github.com/anthropics/anthropic-sdk-python) - Claude client
-- [LangChain SDK](https://python.langchain.com/) - Orchestration framework
-- [Vercel AI SDK](https://sdk.vercel.ai/) - SDK for AI applications
-- [OpenAI Node.js](https://github.com/openai/openai-node) - Official Node.js client
-- [LlamaIndex](https://www.llamaindex.ai/) - Data framework
+- [LangChain SDK](https://python.langchain.com/) - Powerful ecosystem, but abstraction layers can hide what your app is actually doing.
+- [LlamaIndex](https://www.llamaindex.ai/) - Productive for retrieval-heavy apps, but framework coupling adds complexity quickly.
+- [Together AI API](https://docs.together.ai/) - Useful for model breadth, but multi-provider layers can create operational noise.
+- [LiveKit Agents](https://docs.livekit.io/agents/v0/overview/) - Excellent for realtime voice or video systems, but overkill unless realtime is central.
 
-### Voice, Realtime & Multimodal
+### Operational Essentials
 
-- [OpenAI Realtime API](https://platform.openai.com/docs/guides/realtime-websocket) - Build low-latency voice and realtime interactions.
-- [OpenAI Audio and Speech](https://platform.openai.com/docs/guides/audio) - Speech-to-text, text-to-speech, and voice agent building blocks.
-- [LiveKit Agents](https://docs.livekit.io/agents/v0/overview/) - Realtime framework for voice, video, and multimodal agents.
-
-### API Management
-
-- [OpenAI Usage Dashboard](https://platform.openai.com/usage) - Usage dashboard
-- [Anthropic Console](https://console.anthropic.com/) - Claude console
-- [Postman](https://www.postman.com/) - API client
-- [Bruno API Client](https://www.usebruno.com/) - Open-source API client
-- [Insomnia](https://insomnia.rest/) - REST client
-- [Portkey Gateway](https://portkey.ai/) - Gateway for multiple LLMs
-
-### Rate Limits & Pricing
-
-- [OpenAI Pricing](https://openai.com/pricing) - Up-to-date pricing
-- [Anthropic Pricing](https://www.anthropic.com/pricing) - Claude pricing
-- [OpenAI Tokenizer](https://platform.openai.com/tokenizer) - Official tokenizer
-- [Token Calculator](https://huggingface.co/spaces/Xenova/the-tokenizer-playground) - Universal calculator
-- [Cost Estimator](https://gptforwork.com/tools/openai-chatgpt-api-pricing-calculator) - Cost estimator
-
-### Batch, Caching & Background Jobs
-
-- [OpenAI Batch API](https://platform.openai.com/docs/guides/batch/) - Run large async workloads at lower cost.
-- [OpenAI Prompt Caching](https://platform.openai.com/docs/guides/prompt-caching) - Reduce latency and cost on repeated prompt prefixes.
-- [OpenAI Background Mode](https://platform.openai.com/docs/guides/background) - Run long reasoning tasks asynchronously.
-- [Anthropic Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) - Cache reusable prompt prefixes for Claude apps.
-
----
+- [OpenAI Pricing](https://openai.com/pricing) - Check real cost before you commit to a product shape.
+- [Anthropic Pricing](https://www.anthropic.com/pricing) - Useful for cost comparisons and model tier decisions.
+- [OpenAI Batch API](https://platform.openai.com/docs/guides/batch/) - Easy win for asynchronous workloads where latency does not matter.
+- [OpenAI Prompt Caching](https://platform.openai.com/docs/guides/prompt-caching) - Worth using once repeated prompt prefixes become a real cost center.
 
 ## MCP (Model Context Protocol)
 
 ### Official Docs & Spec
 
-- [Model Context Protocol Docs](https://modelcontextprotocol.io/docs) - Official documentation to learn and get started with MCP.
-- [MCP Specification](https://modelcontextprotocol.io/specification/2025-06-18) - Current official protocol specification.
-- [Architecture](https://modelcontextprotocol.io/specification/2025-06-18/architecture/index) - Host / client / server architecture and responsibility boundaries.
-- [Authorization](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization) - OAuth, discovery metadata, and authorization for HTTP transports.
-- [Security Best Practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) - Risks, mitigations, and MCP security best practices.
+- [Model Context Protocol Docs](https://modelcontextprotocol.io/docs) - Start here to understand the protocol and its mental model.
+- [MCP Specification](https://modelcontextprotocol.io/specification/2025-06-18) - Primary source for wire-level and lifecycle details.
+- [Architecture](https://modelcontextprotocol.io/specification/2025-06-18/architecture/index) - Helpful when designing host, client, and server boundaries.
+- [Authorization](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization) - Read this before exposing remote MCP servers.
+- [Security Best Practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) - Mandatory reading if MCP will touch real systems or secrets.
 
 ### Official SDKs & Dev Tools
 
-- [modelcontextprotocol GitHub Org](https://github.com/modelcontextprotocol) - Official organization with SDKs, spec, registry, and tooling.
-- [modelcontextprotocol/modelcontextprotocol](https://github.com/modelcontextprotocol/modelcontextprotocol) - Official repository for the specification and documentation.
-- [modelcontextprotocol/typescript-sdk](https://github.com/modelcontextprotocol/typescript-sdk) - Official TypeScript SDK for MCP clients and servers.
-- [modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk) - Official Python SDK for MCP clients and servers.
-- [modelcontextprotocol/inspector](https://github.com/modelcontextprotocol/inspector) - Official tool for testing and debugging MCP servers.
+- [modelcontextprotocol GitHub Org](https://github.com/modelcontextprotocol) - Fastest way to find the official repos that matter.
+- [modelcontextprotocol/typescript-sdk](https://github.com/modelcontextprotocol/typescript-sdk) - Default SDK for TypeScript MCP clients and servers.
+- [modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk) - Default SDK for Python MCP implementations.
+- [modelcontextprotocol/inspector](https://github.com/modelcontextprotocol/inspector) - Best debugging surface for testing MCP servers locally.
 
 ### Registry & Discovery
 
-- [Official MCP Registry](https://registry.modelcontextprotocol.io/) - Official registry for discovering published MCP servers.
-- [modelcontextprotocol/registry](https://github.com/modelcontextprotocol/registry) - Open-source implementation of the official registry.
-- [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) - Reference servers maintained by the steering group.
-- [Smithery](https://smithery.ai/docs/getting_started/quickstart_connect) - Useful companion for discovering and connecting MCP servers with one-click setup.
-- [PulseMCP](https://www.pulsemcp.com/servers) - Companion directory for exploring the broader MCP ecosystem.
+- [Official MCP Registry](https://registry.modelcontextprotocol.io/) - First stop for discovering published servers.
+- [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) - Reference implementations from the steering group.
+- [Smithery](https://smithery.ai/docs/getting_started/quickstart_connect) - Useful companion for finding and wiring community servers.
 
 ### GitHub MCP
 
-- [GitHub MCP Server](https://github.com/github/github-mcp-server) - Official GitHub MCP server for repos, issues, PRs, and workflows.
-- [GitHub Docs: Setting up the GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/set-up-the-github-mcp-server) - Official setup guide for the GitHub MCP server.
-- [GitHub Docs: Configure an MCP Registry](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-registry) - MCP registry management for organizations and enterprises.
-
----
+- [GitHub MCP Server](https://github.com/github/github-mcp-server) - Strong real-world server for repos, issues, PRs, and workflows.
+- [GitHub Docs: Setting up the GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/set-up-the-github-mcp-server) - Official setup guide.
+- [GitHub Docs: Configure an MCP Registry](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-registry) - Useful when MCP becomes an org-level concern.
 
 ## Prompting & Prompt Engineering
 
-### Guides & Documentation
+### Official Guides First
 
-- [OpenAI Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering) - Official guide
-- [Anthropic Prompt Library](https://docs.anthropic.com/claude/docs/prompt-engineering) - Prompt library
-- [Prompt Engineering Guide](https://www.promptingguide.ai/) - Comprehensive guide (DAIR.AI)
-- [Learn Prompting](https://learnprompting.org/) - Interactive course
-- [Microsoft Prompt Guide](https://github.com/microsoft/prompts-for-edu) - Educational guide
-- [OpenAI Best Practices](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) - Best practices
+- [OpenAI Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering) - Best default guide for practical prompting patterns.
+- [Anthropic Prompt Library](https://docs.anthropic.com/claude/docs/prompt-engineering) - Good source of applied prompt patterns and templates.
+- [OpenAI Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) - Use this early if your app needs reliable machine-readable outputs.
+- [OpenAI Guardrails Python](https://openai.github.io/openai-guardrails-python/) - Good starting point for validation and safety layers.
 
-### Tools
+### Good Secondary References
 
-- [PromptPerfect](https://promptperfect.jina.ai/) - Prompt optimizer
-- [PromptBase](https://promptbase.com/) - Prompt marketplace
-- [LangChain Hub](https://smith.langchain.com/hub) - Prompt repository
-- [Poe](https://poe.com/) - Testing platform
-- [Promptfoo](https://promptfoo.dev/) - Prompt testing
-- [PromptLayer](https://www.promptlayer.com/) - Prompt management
+- [Prompt Engineering Guide](https://www.promptingguide.ai/) - Broad reference when you want patterns collected in one place.
+- [Learn Prompting](https://learnprompting.org/) - Useful for onboarding and teaching prompt concepts to a team.
+- [Promptfoo](https://promptfoo.dev/) - Important because prompting gets real only when you test it.
 
-### Guardrails & Structured Outputs
+### Read With Skepticism
 
-- [OpenAI Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) - Enforce JSON schema-shaped outputs from models.
-- [OpenAI Guardrails Python](https://openai.github.io/openai-guardrails-python/) - Validation and safety checks for LLM applications.
-- [Anthropic Guardrails Guide](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-prompt-leak) - Practical guidance for safer prompt and output handling.
-
-### Techniques & Patterns
-
-- [Chain-of-Thought Paper](https://arxiv.org/abs/2201.11903) - Original CoT paper
-- [ReAct Prompting](https://arxiv.org/abs/2303.11366) - Reasoning + Acting
-- [Tree of Thoughts](https://arxiv.org/abs/2305.10601) - Reasoning exploration
-- [Constitutional AI](https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback) - Constitutional AI
-- [Few-Shot Learning](https://arxiv.org/abs/2005.14165) - Learning with examples
-- [Techniques Repository](https://github.com/dair-ai/Prompt-Engineering-Guide) - Technique repository
-
-### Collections
-
-- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) - Popular collection
-- [FlowGPT](https://flowgpt.com/) - Prompt community
-- [ShareGPT](https://sharegpt.com/) - Share conversations
-- [Snack Prompt](https://snackprompt.com/) - Curated prompts
-- [Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering) - Curated list
-
----
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) - Good for inspiration, not for production methodology.
+- [PromptBase](https://promptbase.com/) - Marketplace popularity is not strong evidence of prompt quality.
 
 ## Frameworks & Tools
 
-### Orchestration
+### Core
 
-- [LangChain Docs](https://python.langchain.com/) - Main framework
-- [LangGraph](https://langchain-ai.github.io/langgraph/) - Agent graphs
-- [LlamaIndex](https://docs.llamaindex.ai/) - Data framework
-- [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/) - Microsoft's framework
-- [Haystack](https://haystack.deepset.ai/) - NLP framework
-- [Marvin](https://github.com/prefecthq/marvin) - Lightweight framework
+- [LangGraph](https://langchain-ai.github.io/langgraph/) - Best default when you need explicit state, control flow, and long-running agent workflows.
+- [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/quickstart/) - Good default for tool-using agents without a huge abstraction tax.
+- [Playwright](https://playwright.dev/docs/intro) - Best default for browser automation and reliable agent actions.
+- [LangSmith](https://smith.langchain.com/) - Worth using if your team is already committed to LangChain or LangGraph.
+- [LangFuse](https://langfuse.com/) - Good open-source observability option when you want traces without full vendor lock-in.
 
-### Agents & Automation
+### Explore Carefully
 
-- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) - Autonomous agent
-- [CrewAI](https://www.crewai.com/) - Multi-agent framework
-- [SuperAGI](https://superagi.com/) - Agent platform
-- [MetaGPT](https://github.com/geekan/MetaGPT) - Multi-agent framework for development
-- [BabyAGI](https://github.com/yoheinakajima/babyagi) - Simple task framework
-- [LangGraph Agents](https://www.langchain.com/langgraph) - Agent system
-
-### Agent SDKs & Browser Automation
-
-- [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/quickstart/) - Build agents with tools, handoffs, and tracing.
-- [OpenAI Computer Use](https://platform.openai.com/docs/guides/tools-computer-use) - Build browser and computer-using agents.
-- [Playwright](https://playwright.dev/docs/intro) - Browser automation for testing and agent execution loops.
-
-### Development & Testing
-
-- [LangSmith](https://smith.langchain.com/) - Development platform
-- [PromptLayer](https://www.promptlayer.com/) - Observability
-- [Helicone](https://www.helicone.ai/) - Observability and analytics
-- [LangFuse](https://langfuse.com/) - Open-source observability
-- [Portkey](https://portkey.ai/) - Gateway and observability
-- [Braintrust](https://braintrust.dev/) - Evaluation and testing
-
-### UI & Frontends
-
-- [Streamlit](https://streamlit.io/) - Fast Python apps
-- [Gradio](https://www.gradio.app/) - ML interfaces
-- [Chainlit](https://docs.chainlit.io/) - Conversational apps
-- [Mesop](https://github.com/google/mesop) - Google's framework
-- [Vercel AI SDK](https://sdk.vercel.ai/) - SDK for web
-- [Reflex](https://reflex.dev/) - Full-stack Python framework
-
----
+- [CrewAI](https://www.crewai.com/) - Useful for role-based multi-agent prototypes, but teams often outgrow the abstraction.
+- [Haystack](https://haystack.deepset.ai/) - Mature and capable, but best when you actually want its opinionated ecosystem.
+- [Chainlit](https://docs.chainlit.io/) - Great for internal chat demos, but not my default for product-grade frontend control.
+- [Streamlit](https://streamlit.io/) - Excellent for internal tooling, but limited once UX becomes a competitive feature.
 
 ## RAG (Retrieval Augmented Generation)
 
-### Vector Databases
+### Core
 
-- [Pinecone](https://www.pinecone.io/) - Managed vector database
-- [Weaviate](https://weaviate.io/) - Open-source vector database
-- [Chroma](https://www.trychroma.com/) - Embeddings database
-- [Qdrant](https://qdrant.tech/) - Vector search engine
-- [Milvus](https://milvus.io/) - Distributed vector database
-- [pgvector](https://github.com/pgvector/pgvector) - PostgreSQL extension
-- [Elasticsearch](https://www.elastic.co/elasticsearch/vector-database) - Search engine with vector support
+- [pgvector](https://github.com/pgvector/pgvector) - Best default when Postgres is already in your stack and you want fewer moving parts.
+- [Qdrant](https://qdrant.tech/) - Strong dedicated vector database with a good balance of capability and operational clarity.
+- [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings) - Easy default for retrieval systems that need reliable hosted embeddings.
+- [Cohere Rerank](https://docs.cohere.com/docs/reranking) - High-leverage upgrade once first-pass retrieval quality stops being enough.
+- [Sentence Transformers Cross-Encoders](https://www.sbert.net/examples/cross_encoder/applications/README.html) - Good open-source reranking path when you need more control.
 
-### Embedding Models
+### Explore Carefully
 
-- [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings) - text-embedding-3
-- [Sentence Transformers](https://www.sbert.net/) - Open-source models
-- [Cohere Embed](https://docs.cohere.com/docs/embeddings) - Multilingual embeddings
-- [Voyage AI](https://www.voyageai.com/) - Specialized embeddings
-- [E5 Models](https://huggingface.co/intfloat/e5-large-v2) - High-quality embeddings
-- [Jina Embeddings](https://jina.ai/embeddings/) - Multimodal embeddings
+- [Pinecone](https://www.pinecone.io/) - Polished managed option, but many teams should first ask whether Postgres is already enough.
+- [Weaviate](https://weaviate.io/) - Feature-rich, but a bigger surface area than plenty of teams actually need.
+- [RAGFlow](https://github.com/infiniflow/ragflow) - Useful for visual workflows, but can hide retrieval details you eventually need to own.
+- [Unstructured.io](https://unstructured.io/) - Helpful ingestion layer, but add it only when simpler parsing actually breaks.
 
-### RAG Frameworks
+### Reference Implementations
 
-- [LlamaIndex RAG](https://docs.llamaindex.ai/en/stable/getting_started/starter_example.html) - Comprehensive framework
-- [LangChain RAG](https://python.langchain.com/docs/use_cases/question_answering/) - Flexible implementation
-- [Haystack](https://haystack.deepset.ai/) - NLP framework with RAG
-- [Verba by Weaviate](https://github.com/weaviate/Verba) - RAG application
-- [RAGFlow](https://github.com/infiniflow/ragflow) - Visual framework
-- [RAGs (LlamaIndex)](https://github.com/run-llama/rags) - Templates RAG
-
-### Reranking
-
-- [Cohere Rerank](https://docs.cohere.com/docs/reranking) - API reranking for search and RAG pipelines.
-- [Voyage AI Rerankers](https://docs.voyageai.com/docs/reranker) - Long-context rerankers for retrieval quality.
-- [Sentence Transformers Cross-Encoders](https://www.sbert.net/examples/cross_encoder/applications/README.html) - Open-source reranking models and patterns.
-
-### Tools & Utils
-
-- [Unstructured.io](https://unstructured.io/) - Document processing
-- [LlamaParse](https://github.com/run-llama/llama_parse) - Document parser
-- [PyPDF2](https://pypdf2.readthedocs.io/) - PDF manipulation
-- [LangChain Loaders](https://python.langchain.com/docs/modules/data_connection/document_loaders/) - Document loaders
-- [Retrieval Tutorials](https://github.com/FullStackRetrieval-com/RetrievalTutorials) - Advanced tutorials
-- [Chunking Strategies](https://www.youtube.com/watch?v=sVcwVQRHIc8) - Explainer video
-
----
+- [LlamaIndex RAG](https://docs.llamaindex.ai/en/stable/getting_started/starter_example.html) - Helpful reference if you want a batteries-included retrieval stack.
+- [LangChain RAG](https://python.langchain.com/docs/use_cases/question_answering/) - Useful reference if your team already uses LangChain components.
+- [Chunking Strategies](https://www.youtube.com/watch?v=sVcwVQRHIc8) - Practical explainer for a topic that still causes many avoidable retrieval bugs.
 
 ## Fine-tuning & Training
 
-### Platforms
+### Start Here
 
-- [OpenAI Fine-tuning](https://platform.openai.com/docs/guides/fine-tuning) - Official fine-tuning
-- [HF AutoTrain](https://huggingface.co/autotrain) - AutoML for LLMs
-- [Together AI Fine-tuning](https://www.together.ai/products/fine-tuning) - Cloud fine-tuning
-- [Fireworks AI](https://fireworks.ai/fine-tuning) - Fine-tuning platform
-- [Modal Labs](https://modal.com/) - Serverless infrastructure
-- [Anyscale](https://www.anyscale.com/) - Ray platform
+- [OpenAI Fine-tuning](https://platform.openai.com/docs/guides/fine-tuning) - Start here if hosted fine-tuning already fits your stack and constraints.
+- [PEFT (LoRA)](https://github.com/huggingface/peft) - Best default technique family for efficient adaptation.
+- [QLoRA](https://github.com/artidoro/qlora) - Important when hardware budget is tight but you still need useful adaptation.
+- [TRL (Transformers RL)](https://github.com/huggingface/trl) - Strong library for post-training, preference optimization, and RL-style workflows.
 
-### Frameworks
+### Explore Carefully
 
-- [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) - Comprehensive framework
-- [PEFT (LoRA)](https://github.com/huggingface/peft) - Parameter-Efficient Fine-Tuning
-- [QLoRA](https://github.com/artidoro/qlora) - Quantized LoRA
-- [Unsloth](https://github.com/unslothai/unsloth) - Fast fine-tuning
-- [TRL (Transformers RL)](https://github.com/huggingface/trl) - Reinforcement Learning
-- [Lit-GPT](https://github.com/Lightning-AI/lit-gpt) - Efficient fine-tuning
+- [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) - Powerful training stack, but it pays off mainly when you truly need training depth.
+- [Unsloth](https://github.com/unslothai/unsloth) - Attractive for speed, but benchmark claims still deserve verification in your setup.
+- [HF AutoTrain](https://huggingface.co/autotrain) - Good for convenience, but abstraction and platform choices can limit later control.
 
 ### Datasets
 
-- [Hugging Face Datasets](https://huggingface.co/datasets) - Dataset hub
-- [OpenAssistant](https://huggingface.co/datasets/OpenAssistant/oasst1) - Conversational dataset
-- [Alpaca Dataset](https://github.com/tatsu-lab/stanford_alpaca) - Stanford instruction dataset
-- [ShareGPT](https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered) - Real conversations
-- [Dolly Dataset](https://github.com/databrickslabs/dolly) - Databricks dataset
-- [Guanaco](https://huggingface.co/datasets/timdettmers/openassistant-guanaco) - Multilingual dataset
-
-### Tutorials & Guides
-
-- [HF Training Guide](https://huggingface.co/docs/transformers/training) - Official guide
-- [LoRA Paper](https://arxiv.org/abs/2106.09685) - Original paper
-- [QLoRA Paper](https://arxiv.org/abs/2305.14314) - Quantization + LoRA
-- [Fine-tuning with TRL](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl) - Comprehensive tutorial
-- [PEFT Tutorial](https://cameronrwolfe.substack.com/p/easily-train-a-specialized-llm-peft) - PEFT guide
-
----
+- [Hugging Face Datasets](https://huggingface.co/datasets) - Default source for finding and loading training data.
+- [OpenAssistant](https://huggingface.co/datasets/OpenAssistant/oasst1) - Useful public conversational dataset reference point.
+- [Dolly Dataset](https://github.com/databrickslabs/dolly) - Still worth knowing as an instruction-tuning reference dataset.
 
 ## Code Examples & Snippets
 
 ### Official Repositories
 
-- [OpenAI Cookbook](https://cookbook.openai.com/) - Official examples
-- [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook) - Claude recipes
-- [LangChain Templates](https://github.com/langchain-ai/langchain/tree/master/templates) - Ready-to-use templates
-- [Vercel AI Examples](https://github.com/vercel/ai/tree/main/examples) - Web examples
-- [Modal Examples](https://github.com/modal-labs/modal-examples) - Serverless examples
-- [Semantic Kernel Samples](https://github.com/microsoft/semantic-kernel/tree/main/samples) - Semantic Kernel samples
-
-### GitHub Collections
-
-- [Awesome LLM](https://github.com/Hannibal046/Awesome-LLM) - Curated resource list
-- [Awesome LangChain](https://github.com/kyrolabs/awesome-langchain) - LangChain resources
-- [Awesome ChatGPT](https://github.com/humanloop/awesome-chatgpt) - ChatGPT resources
-- [Awesome Generative AI](https://github.com/steven2358/awesome-generative-ai) - Generative AI
-- [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - AI agents
-
-### Code Playgrounds
-
-- [GitHub Gists](https://gist.github.com/) - Shared snippets
-- [Replit Templates](https://replit.com/@templates) - Interactive templates
-- [StackBlitz](https://stackblitz.com/) - Online IDE
-- [CodeSandbox](https://codesandbox.io/) - Web sandbox
-- [CodePen](https://codepen.io/) - Playground frontend
-
----
-
-## Datasets & Resources
-
-### Data Platforms
-
-- [Hugging Face Datasets](https://huggingface.co/datasets) - Main hub
-- [Kaggle Datasets](https://www.kaggle.com/datasets) - Competitions and datasets
-- [Papers with Code Datasets](https://paperswithcode.com/datasets) - Datasets from papers
-- [UCI Machine Learning](https://archive.ics.uci.edu/) - Classic repository
-- [Google Dataset Search](https://datasetsearch.research.google.com/) - Google dataset search
-
-### Data for LLMs
-
-- [The Pile](https://pile.eleuther.ai/) - Massive text dataset
-- [Common Crawl](https://commoncrawl.org/) - Open web crawl
-- [C4 Dataset](https://huggingface.co/datasets/c4) - Colossal Clean Crawled Corpus
-- [RedPajama](https://github.com/togethercomputer/RedPajama-Data) - Open-source dataset
-- [LAION](https://laion.ai/) - Multimodal datasets
-
-### Synthetic Data
-
-- [Gretel.ai](https://gretel.ai/) - AI-generated synthetic data
-- [Mostly AI](https://mostly.ai/) - Data generation
-- [Synthetic Data Vault](https://sdv.dev/) - Open-source library
-- [DataCebo](https://www.datacebo.com/) - Synthetic data platform
-
-### Data Tools
-
-- [Pandas AI](https://github.com/gventuri/pandas-ai) - AI-assisted analysis
-- [DVC](https://dvc.org/) - Data version control
-- [Label Studio](https://labelstud.io/) - Data annotation
-- [Cleanlab](https://cleanlab.ai/) - AI-assisted data cleaning
-
----
-
-## Evaluation & Testing
-
-### Evaluation Frameworks
-
-- [LangSmith Evaluations](https://smith.langchain.com/) - Integrated evaluation
-- [Phoenix (Arize AI)](https://docs.arize.com/phoenix) - ML observability
-- [PromptFoo](https://promptfoo.dev/) - Prompt testing
-- [RAGAS](https://github.com/explodinggradients/ragas) - RAG evaluation
-- [DeepEval](https://github.com/confident-ai/deepeval) - Testing framework
-- [OpenAI Evals](https://github.com/openai/evals) - Official framework
-
-### Benchmarks
-
-- [MMLU](https://github.com/hendrycks/test) - Massive Multitask Language Understanding
-- [HellaSwag](https://rowanzellers.com/hellaswag/) - Commonsense reasoning
-- [TruthfulQA](https://github.com/sylinrl/TruthfulQA) - Truthfulness
-- [HumanEval](https://github.com/openai/human-eval) - Code evaluation
-- [GSM8K](https://github.com/openai/grade-school-math) - Math
-- [BIG-bench](https://bigbench.github.io/) - Beyond the Imitation Game
-
-### Monitoring
-
-- [LangFuse](https://langfuse.com/) - Open-source observability
-- [Helicone](https://www.helicone.ai/) - Observability and analytics
-- [LangWatch](https://www.langwatch.ai/) - LLM monitoring
-- [Weights & Biases](https://wandb.ai/) - ML experiments
-- [MLflow](https://mlflow.org/) - MLOps platform
-
----
-
-## Community & Learning
-
-### Reddit
-
-- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/) - ML community
-- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) - Local LLMs
-- [r/ArtificialIntelligence](https://www.reddit.com/r/ArtificialIntelligence/) - General AI
-- [r/LanguageTechnology](https://www.reddit.com/r/LanguageTechnology/) - NLP
-- [r/LangChain](https://www.reddit.com/r/LangChain/) - LangChain
-
-### Discord & Communities
-
-- [LangChain Discord](https://discord.gg/langchain) - Official community
-- [Hugging Face Discord](https://discord.gg/hugging-face) - HF community
-- [OpenAI Community](https://discord.gg/openai) - OpenAI community
-- [AI Engineering Discord](https://discord.gg/fVyRjgB3rW) - AI engineering
-- [MLOps Community](https://mlops.community/) - MLOps practitioners
-
-### Newsletters
-
-- [The Batch (Andrew Ng)](https://www.deeplearning.ai/the-batch/) - DeepLearning.AI
-- [The Gradient](https://thegradient.pub/) - Research and analysis
-- [TLDR AI](https://tldr.tech/ai) - Daily news
-- [The Rundown AI](https://www.therundown.ai/) - Daily roundup
-- [Import AI](https://jack-clark.net/) - Jack Clark
-
-### YouTube Channels
-
-- [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy) - Tutorials deep learning
-- [AI Explained](https://www.youtube.com/@aiexplained-official) - AI explainers
-- [Sam Witteveen](https://www.youtube.com/@samwitteveenai) - LangChain tutorials
-- [Matthew Berman](https://www.youtube.com/@mreflow) - Reviews and tutorials
-- [1littlecoder](https://www.youtube.com/@1littlecoder) - Coding tutorials
-
-### Podcasts
-
-- [Latent Space](https://www.latent.space/podcast) - AI Engineering
-- [Practical AI](https://changelog.com/practicalai) - Practical AI
-- [TWIML AI](https://twimlai.com/) - This Week in ML & AI
-- [Lex Fridman](https://lexfridman.com/podcast/) - In-depth conversations
-- [The Cognitive Revolution](https://www.cognitiverevolution.ai/) - AI impact
-
----
-
-## Papers & Research
-
-### Repositories
-
-- [arXiv cs.AI](https://arxiv.org/list/cs.AI/recent) - AI papers
-- [arXiv cs.CL](https://arxiv.org/list/cs.CL/recent) - Computational Linguistics
-- [Papers with Code](https://paperswithcode.com/) - Papers with implementations
-- [Semantic Scholar](https://www.semanticscholar.org/) - Academic search engine
-- [Connected Papers](https://www.connectedpapers.com/) - Paper graphs
+- [OpenAI Cookbook](https://cookbook.openai.com/) - Best default example set for real API usage patterns.
+- [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook) - Good applied examples for Claude workflows.
+- [Vercel AI Examples](https://github.com/vercel/ai/tree/main/examples) - Strong reference for web UX, streaming, and AI product patterns.
+- [Semantic Kernel Samples](https://github.com/microsoft/semantic-kernel/tree/main/samples) - Useful if your stack is already close to Microsoft tooling.
 
 ### Curated Collections
 
-- [Awesome LLM Papers](https://github.com/Hannibal046/Awesome-LLM#papers) - Important papers
-- [ML Papers of the Week](https://github.com/dair-ai/ML-Papers-of-the-Week) - Weekly curation
-- [Applied ML Papers](https://github.com/eugeneyan/applied-ml) - Applied ML papers
-- [Arxiv Sanity](https://arxiv-sanity-lite.com/) - Paper browser
+- [Awesome LLM](https://github.com/Hannibal046/Awesome-LLM) - Good high-level map when you need breadth on the research and tooling ecosystem.
+- [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - Useful secondary list for agent-specific discovery.
+- [Modal Examples](https://github.com/modal-labs/modal-examples) - Handy reference if you deploy model-heavy code on Modal.
+
+## Datasets & Resources
+
+### Reliable Starting Points
+
+- [Hugging Face Datasets](https://huggingface.co/datasets) - Default hub for discoverability, loaders, and reuse.
+- [Kaggle Datasets](https://www.kaggle.com/datasets) - Good when you want practical, task-oriented public datasets.
+- [Papers with Code Datasets](https://paperswithcode.com/datasets) - Useful bridge between papers, benchmarks, and data.
+- [UCI Machine Learning](https://archive.ics.uci.edu/) - Classic source for lightweight experiments and teaching.
+
+### Data for LLM Work
+
+- [Common Crawl](https://commoncrawl.org/) - Important web-scale corpus reference point.
+- [RedPajama](https://github.com/togethercomputer/RedPajama-Data) - Helpful open recreation effort for LLM pretraining studies.
+- [LAION](https://laion.ai/) - Key source for multimodal and image-text data exploration.
+
+### Data Tooling
+
+- [DVC](https://dvc.org/) - Strong default for dataset and experiment versioning.
+- [Label Studio](https://labelstud.io/) - Good labeling and annotation platform for custom data work.
+- [Cleanlab](https://cleanlab.ai/) - Useful when label quality, not model size, is the real bottleneck.
+
+## Evaluation & Testing
+
+### Core
+
+- [Promptfoo](https://promptfoo.dev/) - Best default for local-first evals, regression checks, and CI gating.
+- [RAGAS](https://github.com/explodinggradients/ragas) - Strong fit for retrieval-centric evaluation and synthetic test generation.
+- [DeepEval](https://github.com/confident-ai/deepeval) - Good when you want test-like assertions in code.
+- [Braintrust](https://braintrust.dev/) - Strong choice when you want traces, datasets, experiments, and production feedback in one place.
+
+### Explore Carefully
+
+- [LangSmith Evaluations](https://smith.langchain.com/) - Great if you already live in LangChain, less compelling as a standalone default.
+- [OpenAI Evals](https://github.com/openai/evals) - Important reference framework, but often more educational than turnkey.
+- [Phoenix (Arize AI)](https://docs.arize.com/phoenix) - Solid observability, but add it deliberately instead of collecting platforms by habit.
+
+### Benchmarks That Still Matter
+
+- [HumanEval](https://github.com/openai/human-eval) - Still useful for code-generation sanity checks.
+- [MMLU](https://github.com/hendrycks/test) - Broad knowledge benchmark that remains common in model comparisons.
+- [TruthfulQA](https://github.com/sylinrl/TruthfulQA) - Useful reminder that factuality and calibration are separate concerns.
+
+## Community & Learning
+
+### High-Signal Newsletters
+
+- [The Batch (Andrew Ng)](https://www.deeplearning.ai/the-batch/) - Consistently useful for broad industry signal.
+- [Import AI](https://jack-clark.net/) - High-signal analysis with less hype than most AI news.
+- [The Gradient](https://thegradient.pub/) - Good bridge between research and practical interpretation.
+
+### Communities
+
+- [AI Engineering Discord](https://discord.gg/fVyRjgB3rW) - Good practitioner community for builders and operators.
+- [MLOps Community](https://mlops.community/) - Strong option if your AI work touches deployment, evaluation, and production systems.
+- [OpenAI Community](https://discord.gg/openai) - Useful when you need product-specific discussion and announcements.
+
+### People and Shows Worth Following
+
+- [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy) - High-signal explanations from first principles.
+- [Latent Space](https://www.latent.space/podcast) - Strong AI engineering podcast with technical and product context.
+- [The Cognitive Revolution](https://www.cognitiverevolution.ai/) - Good long-form interviews on AI capabilities and impact.
+
+### Reddit, Use Sparingly
+
+- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/) - Useful for links and discussion, but quality varies heavily.
+- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) - Great for local-model experimentation, but not a substitute for official docs.
+
+## Papers & Research
+
+### Best Discovery Surfaces
+
+- [Papers with Code](https://paperswithcode.com/) - Best starting point when you want papers tied to implementations and benchmarks.
+- [Semantic Scholar](https://www.semanticscholar.org/) - Reliable academic search engine with strong discovery features.
+- [arXiv cs.AI](https://arxiv.org/list/cs.AI/recent) - Direct source for new AI papers.
+- [arXiv cs.CL](https://arxiv.org/list/cs.CL/recent) - Best direct feed for language-model-adjacent research.
+
+### Curated Collections
+
+- [Applied ML Papers](https://github.com/eugeneyan/applied-ml) - Strong collection of practical papers with commentary.
+- [ML Papers of the Week](https://github.com/dair-ai/ML-Papers-of-the-Week) - Good recurring curation when you want breadth.
+- [Awesome LLM Papers](https://github.com/Hannibal046/Awesome-LLM#papers) - Useful map of core LLM papers and themes.
 
 ### Research Blogs
 
-- [OpenAI Research](https://openai.com/research/) - Official OpenAI blog
-- [Anthropic Research](https://www.anthropic.com/research) - Claude research
-- [Google AI Blog](https://blog.google/technology/ai/) - Google's blog
-- [Meta AI Research](https://ai.meta.com/research/) - Meta research
-- [DeepMind](https://www.deepmind.com/research) - DeepMind research
-
----
+- [OpenAI Research](https://openai.com/research/) - Primary source for OpenAI research updates and system notes.
+- [Anthropic Research](https://www.anthropic.com/research) - Good source for alignment, safety, and model behavior work.
+- [Google AI Blog](https://blog.google/technology/ai/) - Useful for product-adjacent research announcements.
+- [DeepMind](https://www.deepmind.com/research) - Worth following for large-scale research programs and papers.
 
 ## Deployment & MLOps
 
-### Hosting & Inference
+### Core
 
-- [Modal](https://modal.com/) - Serverless for ML
-- [Replicate](https://replicate.com/) - Model hosting
-- [HF Inference Endpoints](https://huggingface.co/inference-endpoints) - Managed endpoints
-- [Together AI](https://www.together.ai/) - Optimized inference
-- [Fireworks AI](https://fireworks.ai/) - Fast inference
-- [RunPod](https://www.runpod.io/) - GPU cloud
-- [Banana.dev](https://www.banana.dev/) - Serverless GPU
+- [Modal](https://modal.com/) - Best default when you want to ship compute-heavy AI backends quickly.
+- [Cloudflare AI](https://developers.cloudflare.com/workers-ai/) - Strong lightweight deployment path for edge-adjacent AI workloads.
+- [vLLM](https://github.com/vllm-project/vllm) - Default serving stack when open-model inference performance matters.
+- [BentoML](https://www.bentoml.com/) - Strong packaging and serving layer for custom inference systems.
+- [Sentry](https://sentry.io/) - Keep standard application monitoring in the loop; AI failures are still product failures.
 
-### Serverless & Cloud
+### Explore Carefully
 
-- [Vercel AI](https://vercel.com/ai) - AI app deployment
-- [AWS Bedrock](https://aws.amazon.com/bedrock/) - LLMs on AWS
-- [Google Vertex AI](https://cloud.google.com/vertex-ai) - Google's ML platform
-- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) - OpenAI on Azure
-- [Cloudflare AI](https://developers.cloudflare.com/workers-ai/) - Workers AI
+- [Replicate](https://replicate.com/) - Excellent for fast experimentation, but platform coupling can show up quickly.
+- [Fireworks AI](https://fireworks.ai/) - Fast managed inference, but justify the extra vendor layer on cost and control.
+- [RunPod](https://www.runpod.io/) - Useful GPU access path, but teams often need more operational scaffolding than it gives.
+- [Together AI](https://www.together.ai/) - Good open-model breadth, but vendor consolidation often simplifies ops later.
 
-### Containerization & Serving
+### Infra Adjacent
 
-- [Docker Hub](https://hub.docker.com/) - Docker images
-- [vLLM](https://github.com/vllm-project/vllm) - Fast inference
-- [Text Generation Inference](https://github.com/huggingface/text-generation-inference) - Hugging Face TGI
-- [Triton Inference Server](https://github.com/triton-inference-server/server) - NVIDIA Triton
-- [BentoML](https://www.bentoml.com/) - ML serving framework
-- [Ray Serve](https://www.ray.io/ray-serve) - Distributed serving
-
-### Monitoring & Observability
-
-- [Grafana](https://grafana.com/) - Metrics visualization
-- [Prometheus](https://prometheus.io/) - Monitoring and alerts
-- [DataDog](https://www.datadoghq.com/) - Cloud observability
-- [New Relic](https://newrelic.com/) - Application monitoring
-- [Sentry](https://sentry.io/) - Error tracking
-
----
+- [Prometheus](https://prometheus.io/) - Strong default for metrics and alerts if you operate your own stack.
+- [Grafana](https://grafana.com/) - Useful visualization layer once you have real production signals to watch.
 
 ## Daily Utilities
 
 ### Formatters & Validators
 
-- [JSON Formatter](https://jsonformatter.org/) - Format and validate JSON
-- [YAML Validator](https://www.yamllint.com/) - YAML validator
-- [Markdown Editor](https://dillinger.io/) - Online editor
-- [Token Counter (OpenAI)](https://platform.openai.com/tokenizer) - Official tokenizer
-- [Base64 Encoder/Decoder](https://www.base64encode.org/) - Base64 encoder/decoder
+- [Token Counter (OpenAI)](https://platform.openai.com/tokenizer) - Useful for fast token sanity checks while prototyping prompts.
+- [JSON Formatter](https://jsonformatter.org/) - Handy for debugging structured outputs and payloads.
+- [YAML Validator](https://www.yamllint.com/) - Useful whenever config files start failing silently.
 
-### Regex & Text
+### API & HTTP
 
-- [Regex101](https://regex101.com/) - Testing and explanation
-- [RegExr](https://regexr.com/) - Visual editor
-- [Diff Checker](https://www.diffchecker.com/) - Compare texts
-- [Character Counter](https://wordcounter.net/) - Character counter
+- [Bruno](https://www.usebruno.com/) - My default API client because it is lightweight and repo-friendly.
+- [HTTPie](https://httpie.io/) - Great CLI-first option for quick API testing.
+- [Postman](https://www.postman.com/) - Still useful for team collections and shared API workflows.
 
-### API Testing
+### General Dev Helpers
 
-- [Postman](https://www.postman.com/) - Full API client
-- [Insomnia](https://insomnia.rest/) - REST client
-- [Bruno](https://www.usebruno.com/) - Open-source client
-- [HTTPie](https://httpie.io/) - CLI client
-- [cURL Converter](https://curlconverter.com/) - Convert cURL
-
-### Dev Tools
-
-- [Can I Use](https://caniuse.com/) - Web compatibility
-- [DevDocs](https://devdocs.io/) - Unified documentation
-- [Context7](https://context7.com/) - Up-to-date documentation and context for code and AI tools
-- [HTTP Status Codes](https://httpstatuses.com/) - HTTP reference
-- [Crontab Guru](https://crontab.guru/) - Cron expression helper
-- [Transform Tools](https://transform.tools/) - Transform code
-
-### AI Tools
-
-- [OpenAI Playground](https://platform.openai.com/playground) - Official playground
-- [ChatGPT](https://chat.openai.com/) - Chat interface
-- [Claude](https://claude.ai/) - Claude interface
-- [Google Gemini](https://gemini.google.com/) - Gemini chat
-- [Perplexity](https://www.perplexity.ai/) - AI search
-
----
+- [Context7](https://context7.com/) - Useful for up-to-date docs context and developer lookups.
+- [DevDocs](https://devdocs.io/) - Good unified reference surface when you live in docs all day.
+- [Can I Use](https://caniuse.com/) - Still worth keeping around for frontend compatibility checks.
+- [Crontab Guru](https://crontab.guru/) - Best quick reference for cron expressions.
 
 ## Additional Resources
 
-### Online Courses
+### Essential Documentation
 
-- [DeepLearning.AI](https://www.deeplearning.ai/) - Andrew Ng courses
-- [Fast.ai](https://www.fast.ai/) - Practical deep learning
-- [Hugging Face Course](https://huggingface.co/learn/nlp-course) - Free NLP course
-- [Full Stack LLM Bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/) - Comprehensive LLM bootcamp
+- [OpenAI Cookbook](https://cookbook.openai.com/) - Best general reference for practical API patterns and examples.
+- [Hugging Face Docs](https://huggingface.co/docs) - Default documentation hub for open-model tooling.
+- [LangChain Docs](https://python.langchain.com/docs/get_started/introduction) - Useful reference if your stack already includes LangChain.
 
 ### Books
 
-- [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) - Chip Huyen
-- [Build a Large Language Model](https://www.manning.com/books/build-a-large-language-model-from-scratch) - Sebastian Raschka
-- [Hands-On Large Language Models](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/) - Jay Alammar
+- [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) - Best systems-level book in this space.
+- [Hands-On Large Language Models](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/) - Practical book for applied LLM work.
+- [Build a Large Language Model](https://www.manning.com/books/build-a-large-language-model-from-scratch) - Good if you want a stronger first-principles mental model.
 
-### Essential Documentation
+### Courses
 
-- [Hugging Face Docs](https://huggingface.co/docs) - Comprehensive documentation
-- [LangChain Docs](https://python.langchain.com/docs/get_started/introduction) - Guides and API
-- [OpenAI Cookbook](https://cookbook.openai.com/) - Practical examples
-
----
+- [Full Stack LLM Bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/) - Best high-signal course for applied LLM builders.
+- [Hugging Face Course](https://huggingface.co/learn/nlp-course) - Strong free course for modern NLP and transformer basics.
+- [Fast.ai](https://www.fast.ai/) - Good practical ML education with a strong engineering bent.
 
 ## How to Use This List
 
-### Recommended Organization
+### Reading Order
 
-1. **Bookmark folders by category** - Create folders in your browser following this structure
-2. **Tags for cross-referencing** - Some resources belong to multiple categories
-3. **Regular updates** - Check new resources weekly
-4. **Personal favorites** - Mark with ⭐ your most used resources
+- Start with `Core` entries before you explore alternatives.
+- Use `Explore Carefully` only when the default path fails a concrete requirement.
+- Prefer official docs and SDKs over commentary and tool roundups.
+- Revisit this list quarterly, not daily. Constant churn is usually noise.
 
 ### Suggested Workflow
 
-- **Daily development**: IDEs, APIs, Frameworks
-- **Learning**: Papers, Courses, Community
-- **Production**: Deployment, Monitoring, MLOps
-- **Research**: Papers, Benchmarks, Research Blogs
+- Pick one editor, one model provider, and one SDK before adding more tooling.
+- Add orchestration only after you have a working single-agent or single-call baseline.
+- Add retrieval and evals early if the product depends on knowledge grounding or repeatability.
+- Add deployment and monitoring before scale, not after incidents.
