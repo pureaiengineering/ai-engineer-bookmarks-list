@@ -150,7 +150,29 @@
 ### Conventions & Building Blocks
 
 - [AGENTS.md](https://agents.md/) - Practical convention for repo-level instructions that help coding agents work with the right context and constraints.
+
+### Skills & Instructions
+
+- [Agent Skills Open Standard](https://agentskills.io/home) - Open specification and documentation for portable `SKILL.md`-based skills across compatible agent tools.
+- [Agent Skills Spec Repo](https://github.com/agentskills/agentskills) - Canonical repository for the Agent Skills specification, docs, and reference materials.
+
+#### Codex
+
+- [OpenAI Skills Catalog](https://github.com/openai/skills) - Official public catalog of Codex skills for reusable task guidance, scripts, and references.
+- [Custom instructions with AGENTS.md](https://developers.openai.com/codex/guides/agents-md) - Use this to steer Codex with repo-scoped instructions, conventions, and validation steps.
+- [Codex Subagents](https://developers.openai.com/codex/subagents) - Useful when you want specialized Codex helpers with distinct prompts, tools, and responsibilities.
+
+#### Claude
+
 - [Anthropic Skills](https://github.com/anthropics/skills) - Reusable building blocks for packaging agent capabilities and workflows into composable skills.
+- [Claude Code Subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agents) - Best official guide for creating specialized Claude helpers with separate context and tool permissions.
+- [Claude Code Slash Commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands) - Useful for repeatable task entrypoints, project workflows, and interactive control during sessions.
+
+#### Copilot
+
+- [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) - Best overview of how Copilot loads reusable skill folders with instructions, scripts, and resources.
+- [Creating Agent Skills for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-skills) - Official how-to for authoring `SKILL.md`-based skills in repos or home directories.
+- [Repository Custom Instructions for GitHub Copilot](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot) - Useful for repo-wide guidance that should apply broadly rather than only when a skill is relevant.
 - [Awesome GitHub Copilot](https://github.com/github/awesome-copilot) - High-signal collection of Copilot-focused agents, instructions, skills, hooks, workflows, and plugins worth mining for practical patterns.
 
 ### Core
